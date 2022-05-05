@@ -1,0 +1,425 @@
+<nav class="desk-nav">
+        <div class="top-bar">
+            <div class="tb-wrapper">
+                <div class="tb-left">
+                    Call Us: <a href="tel:8014466464" class="tb-link">(801) 446-6464</a>
+                </div>
+                <div class="tb-right">
+                    <button class="tb-link request-consultation">
+                        <ion-icon name="chatbubble-outline"></ion-icon>
+                        Request a Free Consultation
+                    </button>
+                    <button class="spanish-button tb-link">
+                        Español
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="nav-wrapper">
+            <div class="nav-left">
+                <a href="#home">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 673 234"
+                        style="enable-background:new 0 0 673 234;" xml:space="preserve" class="logo-image">
+                        <style type="text/css">
+                            .st1 {
+                                font-family: 'Metropolis-Regular';
+                            }
+
+                            .st2 {
+                                font-size: 74.7355px;
+                            }
+
+                            .st3 {
+                                letter-spacing: -2;
+                            }
+
+                            .st4 {
+                                letter-spacing: 13;
+                            }
+
+                            .st5 {
+                                letter-spacing: 11;
+                            }
+                        </style>
+                        <g class="logo-g">
+                            <text transform="matrix(1 0 0 1 251.9446 65.7903)" class="st0 st1 st2 st3">LOWRANCE</text>
+                            <text transform="matrix(1 0 0 1 251.9446 143.2435)" class="st0 st1 st2 st4">LUNDELL</text>
+                            <text transform="matrix(1 0 0 1 251.9446 220.6966)" class="st0 st1 st2 st5">LOFGREN</text>
+                            <polygon class="st0"
+                                points="44.07,3.18 44.07,196.7 182.3,196.7 182.3,229.71 4.58,229.71 4.58,32.4 	" />
+                            <polygon class="st0"
+                                points="190.84,229.71 190.84,36.19 52.61,36.19 52.61,3.18 230.33,3.18 230.33,200.49 	" />
+                            <polygon class="st0"
+                                points="52.61,45.45 52.61,182.88 182.3,182.88 182.3,149.54 85.52,149.54 85.52,69.69 	" />
+                        </g>
+                    </svg>
+                </a>
+            </div>
+            <div class="nav-right">
+                <a class="nav-button practices" href="#practices">Practices</a>
+                <a class="nav-button our-team" href="#team">Our Team</a>
+                <a class="nav-button testimonials" href="#testimonials">Testimonials</a>
+                <a class="nav-button contact" href="#contact">Contact</a>
+                <a class="nav-button blog" href="blog">Blog</a>
+            </div>
+        </div>
+    </nav>
+    <nav class="mobile-nav">
+        <a class="mobile-logo" href="#home"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 673 234"
+                style="enable-background:new 0 0 673 234;" xml:space="preserve" class="logo-image">
+                <style type="text/css">
+                    .st1 {
+                        font-family: 'Metropolis-Regular';
+                    }
+
+                    .st2 {
+                        font-size: 74.7355px;
+                    }
+
+                    .st3 {
+                        letter-spacing: -2;
+                    }
+
+                    .st4 {
+                        letter-spacing: 13;
+                    }
+
+                    .st5 {
+                        letter-spacing: 11;
+                    }
+                </style>
+                <g class="logo-g">
+                    <text transform="matrix(1 0 0 1 251.9446 65.7903)" class="st0 st1 st2 st3">LOWRANCE</text>
+                    <text transform="matrix(1 0 0 1 251.9446 143.2435)" class="st0 st1 st2 st4">LUNDELL</text>
+                    <text transform="matrix(1 0 0 1 251.9446 220.6966)" class="st0 st1 st2 st5">LOFGREN</text>
+                    <polygon class="st0"
+                        points="44.07,3.18 44.07,196.7 182.3,196.7 182.3,229.71 4.58,229.71 4.58,32.4 	" />
+                    <polygon class="st0"
+                        points="190.84,229.71 190.84,36.19 52.61,36.19 52.61,3.18 230.33,3.18 230.33,200.49 	" />
+                    <polygon class="st0"
+                        points="52.61,45.45 52.61,182.88 182.3,182.88 182.3,149.54 85.52,149.54 85.52,69.69 	" />
+                </g>
+            </svg>
+        </a>
+        <button class="mob-menu-button" onclick="openMobNav()">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    </nav>
+    <div class="side-menu mob-nav-hidden">
+        <button class="mob-close-button" onclick="closeMobNav()">
+            <ion-icon name="close-sharp"></ion-icon>
+        </button>
+        <div class="mob-menu-buttons">
+            <a class="nav-button practices mobile-button" onclick="closeMobNav()" href="#practices">Practices</a>
+            <a class="nav-button our-team mobile-button" onclick="closeMobNav()" href="#team">Our Team</a>
+            <a class="nav-button testimonials mobile-button" onclick="closeMobNav()"
+                href="#testimonials">Testimonials</a>
+            <a class="nav-button blog mobile-button" onclick="closeMobNav()" href="blog">Blog</a>
+        </div>
+    </div>
+    <div class="accessibility">
+        <div class="accessibility-menu menu-hidden">
+            <a href="#landing-header" class="accessibility-button skip-to-content" onclick="closeAccessButton()"
+                tabindex="1">Skip to Main Content</a>
+            <div class="am-divider"></div>
+            <button class="accessibility-button high-contrast" onclick="activateMenu('high-contrast')"
+                tabindex="2">Higher Contrast</button>
+            <div class="am-divider"></div>
+            <button class="am-close-button">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        </div>
+        <button class="accessibility-menu-button">
+            <ion-icon name="accessibility-outline"></ion-icon>
+        </button>
+    </div>
+    <header class="landing" id="home">
+        <div class="landing-wrapper">
+            <div class="landing-text">
+                <h1 class="landing-text-l1" id="landing-header">
+                    <span class="l-text l-text-1" style="animation-delay: 200ms;">YOUR&nbsp</span><span class="l-text l-text-2" style="animation-delay: 400ms;">FIGHT</span>
+                </h1>
+                <h1 class="landing-text-l2">
+                    <span class="l-text l-text-3" style="animation-delay: 600ms;">IS&nbsp</span>
+                    <span class="l-text l-text-4" style="animation-delay: 800ms;">OUR&nbsp</span><span class="l-text l-text-5" style="animation-delay: 1000ms;">FIGHT.</span>
+                </h1>
+            </div>
+            <div class="cb-wrapper">
+                <a href="#contact" class="consult-button">
+                    REQUEST A FREE CONSULTATION
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="description-box" id="about-us">
+        <h1 class="description-title">
+            Professional, Educated, & Commited
+        </h1>
+        <p class="description-paragraph">
+            Lowrance Lundell Lofgren has successfully represented thousands of clients in Personal Injury, Immigration,
+            and Criminal matters. With decades of experience, Lowrance Lundell Lofgren provides experienced,
+            knowledgeable and compassionate representation of its clients. We look forward to meeting your legal
+            services needs.
+        </p>
+    </section>
+    <section class="practices-box" id="practices">
+        <h1 class="practices-title">
+            Our Practices
+        </h1>
+        <div class="practices-content-item personal-injury-content content-item-left">
+            <div class="practices-content-right">
+                <h3 class="practices-content-title personal-injury-title">
+                    Personal Injury
+                </h3>
+                <p class="practices-content-paragraph personal-injury-paragraph">
+                    Having litigated thousands of personal injury cases, Lowrance Lundell Lofgren has the
+                    knowledge
+                    and
+                    experience to handle your case, professionally and compassionately, from start to finish. We
+                    handle
+                    motor vehicle injuries, medical malpractice, wrongful death, product liability, dog bites,
+                    workplace
+                    injuries, etc.
+                </p>
+            </div>
+            <img class="practices-content-image personal-injury-image image" src="../assets/personal_injury_picture.png"
+                alt="A doctor and patient discuss the results of an X-Ray" />
+        </div>
+        <div class="practices-content-item wrongful-death-content">
+            <div class="practices-content-right">
+                <h3 class="practices-content-title wrongful-death-title">
+                    Wrongful Death
+                </h3>
+                <p class="practices-content-paragraph wrongful-death-paragraph">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut recusandae dolor reiciendis
+                    fugiat
+                    adipisci animi reprehenderit perferendis eveniet vitae inventore dolores earum deserunt
+                    voluptates
+                    commodi, amet nisi incidunt exercitationem. Ut, quia tenetur iusto beatae incidunt pariatur
+                    accusantium, et, blanditiis necessitatibus accusamus id!
+                </p>
+            </div>
+            <img class="practices-content-image wrongful-death-image image" src="../assets/wrongful_death_picture.jpg"
+                alt="Lit candles at a memorial" />
+        </div>
+        <div class="practices-content-item immigration-content content-item-left">
+            <div class="practices-content-right">
+                <h3 class="practices-content-title immigration-title">
+                    Immigration
+                </h3>
+                <p class="practices-content-paragraph immigration-paragraph">
+                    We can help you apply for immigration benefits and defend against your deportation. We
+                    handle
+                    U.S.
+                    citizenship, family petitions, appeals, Deferred Action (DACA), asylum, U visas, motions to
+                    reopen
+                    and reconsider, immigration consequences of criminal activity, and more.
+                </p>
+            </div>
+            <img class="practices-content-image immigration-image image" src="../assets/immigration_picture.png"
+                alt="Lawyer and clients go over and sign paperwork" />
+        </div>
+        <div class="practices-content-item criminal-defense-content">
+            <div class="practices-content-right">
+                <h3 class="practices-content-title criminal-defense-title">
+                    Criminal Defense
+                </h3>
+                <p class="practices-content-paragraph criminal-defense-paragraph">
+                    We will zealously represent you and be at your side throughout the process. You don’t have
+                    to
+                    face
+                    the criminal justice system alone. We can help you with many different cases such as
+                    misdemeanor
+                    defense, felony defense, DUI cases, drug cases, traffic violations, domestic violence,
+                    pre-filing
+                    investigation and representation, post-conviction work, and more.
+                </p>
+            </div>
+            <img class="practices-content-image criminal-defense-image image"
+                src="../assets/criminal_defense_picture.png"
+                alt="A gavel sits next to a scale, representing the justice system" />
+        </div>
+        <div class="pract-photos-bg photo-bg"></div>
+    </section>
+    <section class="our-team-box" id="team">
+        <h1 class="our-team-title">
+            Meet Our Team
+        </h1>
+        <div class="profile-wrapper swiper">
+            <div class="profile-section swiper-wrapper">
+                <div class="team-profile-item swiper-slide">
+                    <a href="attorneys.html?john-lowrance" class="image-wrapper">
+                        <img src="../assets/John_Headshot.png" class="profile-image john_l" alt="Image of John Lowrance">
+                    </a>
+                </div>
+                <div class="team-profile-item swiper-slide">
+                    <a href="attorneys.html?rick-lundell" class="image-wrapper">
+                        <img src="../assets/Rick_Headshot.png" class="profile-image rick_l" alt="Image of Rick Lundell">
+                    </a>
+                </div>
+                <div class="team-profile-item swiper-slide">
+                    <a href="attorneys.html?brian-lofgren" class="image-wrapper">
+                        <img src="../assets/Brian_Headshot.png" class="profile-image brian_l"
+                            alt="Image of Brian Lofgren">
+                    </a>
+                </div>
+                <div class="team-profile-item pi-inactive swiper-slide">
+                    <a href="attorneys.html?duncan-lutz" class="image-wrapper">
+                        <img src="../assets/Duncan_Headshot.png" class="profile-image" alt="Image of Duncan Lutz">
+                    </a>
+                </div>
+            </div>
+            <div class="p-nav-button-next back-button swiper-button-next"></div>
+            <div class="p-nav-button-prev forward-button swiper-button-prev"></div>
+            <div class="pagination swiper-pagination"></div>
+        </div>
+    </section>
+    <section class="testimonials-box" id="testimonials">
+        <h1 class="testimonials-title">
+            Testimonials
+        </h1>
+        <div class="testim-swiper swiper">
+            <div class="testimonials-wrapper swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonial-holder">
+                        John Lowrance, Rick Lundell, and their entire team worked tirelessly on my case. They were kind,
+                        patient
+                        and easy to talk to, no unapproachable stuffed shirts here! They are awesome! Their office staff
+                        is
+                        the
+                        best ever, communicated with me through the whole process. I would highly recommend this group.
+                        <br>
+                        <br>
+                        - Shauna Merrill
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-holder">
+                        It was a great experience working with them, they made me feel comfortable and taken care of
+                        through the whole process. The best thing was they did it all for a great price, most lawyers
+                        will take as much as they can get out of you, not these guys! I will always use them for my Law
+                        Firm needs. Thank You!
+                        <br>
+                        <br>
+                        - Douglas Timms
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-holder">
+                        Fully satisfied, I highly recommend. Brian and his entire team are honest responsible people. 10
+                        years of good experiences with all my family, and most importantly they do not lie to you to
+                        earn money. If you need an honest group do not hesitate. They are excellent, thanks Brian for
+                        all your attention and for your dedication and help to my family.
+                        <br>
+                        <br>
+                        - Maria Islas
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-holder">
+                        Great firm. Most personal injury lawyers are looking for quick settlements and won't actually
+                        try very hard on your case or take it to court. Not these guys though. They work very hard to
+                        make sure you are getting the biggest settlement possible.
+                        <br>
+                        <br>
+                        - Robert Murdock
+                    </div>
+                </div>
+            </div>
+            <div class="t-nav-button-next back-button swiper-button-next"></div>
+            <div class="t-nav-button-prev forward-button swiper-button-prev"></div>
+        </div>
+        <div class="test-photos-bg photo-bg"></div>
+    </section>
+    <section class="contact-us" id="contact">
+        <h1 class="contact-title">
+            Contact Us
+        </h1>
+        <form>
+        <div class="f-sec-one">
+            <div class="f-line f-one">
+                <div class="input-name-div input-div">
+                    <label for="input-name">Name</label>
+                    <input type="text" name="Name" id="input-name">
+                </div>
+                <div class="input-email-div input-div">
+                    <label for="input-email">Email</label>
+                    <input type="text" name="Email" id="input-email">
+                </div>
+            </div>
+            <div class="f-line f-two">
+                <div class="input-phone-div input-div">
+                    <label for="input-phone" class="i-phone input-label">Phone Number</label>
+                    <input type="text" name="Phone_Number" id="input-phone">
+                </div>
+                <div class="input-case-div input-div">
+                    <label for="input-case-type">Case Type</label>
+                    <select name="Case_Type" id="input-case-type" onclick="openSelectMenu()">
+                        <option value="personal-injury" id="personal-injury">Personal Injury</option>
+                        <option value="wrongful-death" id="wrongful-death">Wrongful Death</option>
+                        <option value="immigration" id="immigration">Immigration</option>
+                        <option value="criminal-defense" id="criminal-defense">Criminal Defense</option>
+                    </select>
+                    <div class="options-wrapper">
+                        <div class="select-option pi top-option" onclick="selectOption(event)">Personal Injury</div>
+                        <div class="select-option wd" onclick="selectOption(event)">Wrongful Death</div>
+                        <div class="select-option im" onclick="selectOption(event)">Immigration</div>
+                        <div class="select-option cd bottom-option" onclick="selectOption(event)">Criminal Defense</div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="f-line f-three">
+                <div class="input-message-div input-div">
+                    <label for="input-message">Message</label>
+                    <textarea id="input-textarea"></textarea>
+                    <input type="textarea" name="Message" id="input-message">
+                </div>
+            </div>
+            <input type="hidden" name="_captcha" value="false">
+            <button type="submit" class="sub-button" onclick="checkForm(event)">Send</button>
+            <div class="error-box"></div>
+        </form>
+    </section>
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-left">
+                <a href="https://www.facebook.com/lowlunlof" target="_blank">
+                    <ion-icon name="logo-facebook" class="social-logo"></ion-icon>
+                </a>
+                <a href="https://www.linkedin.com/company/lowrance-lundell-lofgren" target="_blank">
+                    <ion-icon name="logo-linkedin" class="social-logo"></ion-icon>
+                </a>
+                <a href="https://twitter.com/LowLunLof" target="_blank">
+                    <ion-icon name="logo-twitter" class="social-logo"></ion-icon>
+                </a>
+            </div>
+            <div class="footer-right">
+                <div class="footer-text">
+                    <span class="foot-line-1">
+                        Phone: (801) 446-6464
+                    </span>
+                    <span class="foot-line-2">
+                        Fax: 801-254-0303
+                    </span>
+                    <span class="foot-line-3">
+                        1099 W South Jordan Pkwy, South Jordan, Utah 84095
+                    </span>
+                    <span class="foot-line-4">
+                        ©2022 by Lowrance Lundell Lofgren
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript" src="./scripts/app.js"></script>
+
+    </div>
