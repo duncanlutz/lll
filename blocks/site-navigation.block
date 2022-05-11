@@ -1,8 +1,78 @@
-<nav class="site-navigation">
-  <ul class="site-navigation-list">
+<nav class="desk-nav">
+        <div class="top-bar">
+            <div class="tb-wrapper">
+                <div class="tb-left">
+                    Call Us: <a href="tel:8014466464" class="tb-link {.section active} active-link{.end}">(801) 446-6464</a>
+                </div>
+                <div class="tb-right">
+                    <button class="tb-link request-consultation">
+                        <ion-icon name="chatbubble-outline"></ion-icon>
+                        Request a Free Consultation
+                    </button>
+                    <button class="spanish-button tb-link">
+                        Español
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="nav-wrapper">
+            <div class="nav-left">
+                <a href="#home">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 673 234"
+                        style="enable-background:new 0 0 673 234;" xml:space="preserve" class="logo-image">
+                        <style type="text/css">
+                            .st1 {
+                                font-family: 'Metropolis-Regular';
+                            }
+
+                            .st2 {
+                                font-size: 74.7355px;
+                            }
+
+                            .st3 {
+                                letter-spacing: -2;
+                            }
+
+                            .st4 {
+                                letter-spacing: 13;
+                            }
+
+                            .st5 {
+                                letter-spacing: 11;
+                            }
+                        </style>
+                        <g class="logo-g">
+                            <text transform="matrix(1 0 0 1 251.9446 65.7903)" class="st0 st1 st2 st3">LOWRANCE</text>
+                            <text transform="matrix(1 0 0 1 251.9446 143.2435)" class="st0 st1 st2 st4">LUNDELL</text>
+                            <text transform="matrix(1 0 0 1 251.9446 220.6966)" class="st0 st1 st2 st5">LOFGREN</text>
+                            <polygon class="st0"
+                                points="44.07,3.18 44.07,196.7 182.3,196.7 182.3,229.71 4.58,229.71 4.58,32.4 	" />
+                            <polygon class="st0"
+                                points="190.84,229.71 190.84,36.19 52.61,36.19 52.61,3.18 230.33,3.18 230.33,200.49 	" />
+                            <polygon class="st0"
+                                points="52.61,45.45 52.61,182.88 182.3,182.88 182.3,149.54 85.52,149.54 85.52,69.69 	" />
+                        </g>
+                    </svg>
+                </a>
+            </div>
+  <div class="nav-right">
+    <div class="nav-button practices">
+      <a class="nav-button practices" href="#practices">Practices</a>
+    </div>
+    <div class="nav-button our-team">
+      <a class="nav-button our-team" href="#team">Our Team</a>
+    </div>
+    <div class="nav-button testimonials">
+      <a class="nav-button testimonials" href="#testimonials">Testimonials</a>
+    </div>
+    <div class="nav-button contact">
+      <a class="nav-button contact" href="#contact">Contact</a>
+    </div>
+
     {.repeated section items}
 
-      <li class="site-navigation-item {.section active} active-link{.end}">
+      <div class="nav-button {.section active} active-link{.end}">
 
         <!-- collection link -->
         {.section collection}
@@ -16,8 +86,8 @@
           </a>
         {.end}
 
-      </li>
+      </div>
 
     {.end}
-  </ul>
+  </div>
 </nav>

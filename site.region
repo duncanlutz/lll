@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
     <!-- include system scripts, page meta, and header code injection -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     {squarespace-headers}
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
   </head>
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
 
@@ -15,14 +15,28 @@
       <header class="site-header">
         <!-- site navigation -->
         <squarespace:navigation navigationId="siteNav" template="site-navigation" />
-    
+      </header>
 
+      <!-- cms content injection point -->
       <main class="content-container" role="main" data-content-field="main-content">
        {squarespace.main-content}
       </main>
 
+      <!--Footer with open block field -->
+      <footer class="site-footer">
+        <squarespace:block-field id="footerBlocks" columns="12" />
+      </footer>
+
+    </div>
+
     <!-- combo and minify scripts when not logged in -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <squarespace:script src="swiper.js" combo="true" />
+    <squarespace:script src="jquery.js" combo="true"/>
+    <squarespace:script src="email.js" combo="true"/>
     <squarespace:script src="site.js" combo="{.if authenticatedAccount}false{.or}true{.end}" />
+    <squarespace:script src="app.js" combo="true" />
 
     <!-- other scripts, and footer code injection -->
     {squarespace-footers}

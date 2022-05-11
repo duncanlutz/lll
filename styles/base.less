@@ -1,19 +1,16 @@
-// Color variables (appears count calculates by raw css)
-@color0: #ffffff; // Appears 41 times
-@color1: #72b0d5; // Appears 2 times
-@color2: #ed474a; // Appears 2 times
+@color0: #ffffff;
+@color1: #72b0d5;
+@color2: #ed474a;
 
-// Width variables (appears count calculates by raw css)
-@width6: 100vw; // Appears 12 times
-@width7: 100%; // Appears 9 times
-@width15: 75vw; // Appears 2 times
-@width20: 90%; // Appears 3 times
-@width21: 80%; // Appears 4 times
-@width25: 95%; // Appears 5 times
+@width6: 100vw;
+@width7: 100%;
+@width15: 75vw;
+@width20: 90%;
+@width21: 80%;
+@width25: 95%;
 
-// Height variables (appears count calculates by raw css)
-@height2: 100vh; // Appears 3 times
-@height3: 100%; // Appears 6 times
+@height2: 100vh;
+@height3: 100%;
 
 @main-blue: #72B0D5;
 @dark-blue: #1E283B;
@@ -185,13 +182,13 @@ h1 {
 .desk-nav {
   align-items: center;
   display: flex;
-  display: none;
   flex-direction: column;
   justify-content: center;
-  pointer-events: none;
   position: fixed;
   width: @width6;
   z-index: 998;
+  gap: 1vw;
+  top: 0;
 }
 
 .top-bar {
@@ -265,7 +262,7 @@ h1 {
   }
 }
 
-.nav-button {
+.nav-button > a{
   background-color: rgba(0, 0, 0, 0);
   border: 0;
   color: @color0;
@@ -529,7 +526,7 @@ h1.our-team-title {
 }
 
 .swiper {
-  width: @width20;
+  // width: @width20;
   width: @width21;
 }
 
@@ -549,6 +546,10 @@ h1.our-team-title {
   font-size: 18px;
   justify-content: center;
   text-align: center;
+}
+
+.profile-section {
+  width: 100%;
 }
 
 .slider-wrapper {
@@ -579,7 +580,7 @@ h1.our-team-title {
   }
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 }
 
@@ -591,11 +592,13 @@ h1.our-team-title {
   background: @color0;
 }
 
-.swiper-button-next {
+.swiper-button-next.p-nav-button-next {
+  color: #fff;
   fill: @color0;
 }
 
-.swiper-button-prev {
+.swiper-button-prev.p-nav-button-prev {
+  color: #fff;
   fill: @color0;
 }
 
@@ -781,6 +784,10 @@ h1.testimonials-title {
 }
 
 .t-pagination {
+  z-index: 50;
+}
+
+.p-pagination {
   z-index: 50;
 }
 
