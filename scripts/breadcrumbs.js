@@ -1,7 +1,5 @@
 (() => {
 
-  alert('test')
-
   const loc = window.location.pathname;
 
   if (loc === "/") {
