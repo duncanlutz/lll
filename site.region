@@ -32,12 +32,12 @@
     <!-- combo and minify scripts when not logged in -->
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <squarespace:script src="swiper.js" combo="true" />
-    <squarespace:script src="jquery.js" combo="true"/>
-    <squarespace:script src="breadcrumbs.js" combo="true" />
-    <squarespace:script src="email.js" combo="true"/>
+    <squarespace:script src="swiper.js" />
+    <squarespace:script src="jquery.js" />
+    <squarespace:script src="breadcrumbs.js"  />
+    <squarespace:script src="email.js" />
     <squarespace:script src="site.js" combo="{.if authenticatedAccount}false{.or}true{.end}" />
-    <squarespace:script src="app.js" combo="true" />
+    <squarespace:script src="app.js" />
 
     <!-- other scripts, and footer code injection -->
     {squarespace-footers}
