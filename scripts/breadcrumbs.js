@@ -1,5 +1,6 @@
 (() => {
-  const setBreadcrumbName = (n) => {};
+
+  alert('test')
 
   const loc = window.location.pathname;
 
