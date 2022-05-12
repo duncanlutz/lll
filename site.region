@@ -34,6 +34,7 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <squarespace:script src="swiper.js" combo="true" />
     <squarespace:script src="jquery.js" combo="true"/>
+    <squarespace:script src="breadcrumbs.js" combo="true" />
     <squarespace:script src="email.js" combo="true"/>
     <squarespace:script src="site.js" combo="{.if authenticatedAccount}false{.or}true{.end}" />
     <squarespace:script src="app.js" combo="true" />
