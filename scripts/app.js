@@ -1,5 +1,3 @@
-alert('test')
-
 let stop = false;
 let frameCount = 0;
 let prevMenuNumber, fps, fpsInterval, startTime, now, then, elapsed;

@@ -1,4 +1,4 @@
-const getBreadcrumbs = () => {
+(() => {
   const setBreadcrumbName = (n) => {};
 
   const loc = window.location.pathname;
@@ -66,6 +66,4 @@ const getBreadcrumbs = () => {
         break;
     }
   });
-};
-
-getBreadcrumbs();
+})();
