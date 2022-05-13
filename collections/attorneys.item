@@ -5,11 +5,11 @@
   <div id="post-{id}" class="{@|item-classes}" data-item-id="{id}">
 
     <!--POST TILE-->
-    <h1 class="title" data-content-field="title">
+    <h1 class="name" data-content-field="name">
       {.passthrough?}
-        <a href="{sourceUrl}" target="_blank">{title}</a>
+        <a href="{sourceUrl}" target="_blank">{name}</a>
       {.or}
-        {title}
+        {name}
       {.end}
     </h1>
 
