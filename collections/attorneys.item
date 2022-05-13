@@ -13,6 +13,7 @@
         <div class="attorney-name">{title}</div>
         <!-- Attorney Description / Post body -->
         <div class="attorney-description">{body}</div>
+        <img {@|image-meta}
     </div>
     <div class="background-color"></div>
   </div>
