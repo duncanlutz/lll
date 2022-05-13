@@ -2,19 +2,17 @@
 {.section item}
 
   <!--WRAPPER-->
-  <div id="post-{id}" class="{@|item-classes}" data-item-id="{id}">
-
-    <!--POST TILE-->
-    <h1 class="title" data-content-field="name">
-      {.passthrough?}
-        <a href="{sourceUrl}" target="_blank">{title}</a>
-      {.or}
-        {title}
-      {.end}
-    </h1>
-
-    <!--MAIN CONTENT-->
-    {body}
+  <div id="post-{id}" class="{@|item-classes} attorney-wrapper" data-item-id="{id}">
+  <div class="attorney-center">
+    {.main-image?}
+        <img {@|image-meta} class="attorney-picture"/>
+    {.end}
+    <div class="attorney-copy">
+        <div class="attorney-name">{title}</div>
+        <div class="attorney-description">{body}</div>
+    </div>
+    <div class="background-color"></div>
+  </div>
 
     <!--BLOG INJECTION-->
     {postItemInjectCode}
