@@ -1,24 +1,26 @@
 
 {.section item}
 
-  <!--WRAPPER-->
+  <!-- Attorney Wrapper -->
   <div id="post-{id}" class="{@|item-classes} attorney-wrapper" data-item-id="{id}">
   <div class="attorney-center">
+  <!-- Attorney Photo / Featured Image -->
     {.main-image?}
         <img {@|image-meta} class="attorney-picture"/>
     {.end}
     <div class="attorney-copy">
+    <!-- Attorney name / Title of blog post -->
         <div class="attorney-name">{title}</div>
+        <!-- Attorney Description / Post body -->
         <div class="attorney-description">{body}</div>
     </div>
     <div class="background-color"></div>
   </div>
 
-    <!--BLOG INJECTION-->
+    <!-- BLOG INJECTION (not sure what this does) -->
     {postItemInjectCode}
 
-    <!--SHARE AND LIKE-->
-    {@|like-button}
+    <!-- Social share buttons -->
     {@|social-button}
 
   </div>
