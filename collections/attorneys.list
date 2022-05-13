@@ -1,31 +1,11 @@
-<div class="attorneys-list-wrapper">
-{.repeated section items}
-
-  <a href={fullUrl} id="post-{id}" class="attorneys-list-item {@|item-classes}" data-item-id="{id}">
-        <img src="{customContent.listImage.assetUrl}" class="attorneys-list-image" alt="Image of attorney {title}" />
-        <h3 class="attorney-list-name">{title}</h3>
-  </a>
-
-{.end}
-
-<!-- pagination -->
-{.if pagination}
-  <nav class="blog-list-pagination">
-
-    <!-- newer page -->
-    {.if pagination.prevPage}
-      <a href="{pagination.prevPageUrl}">Newer</a>
-    {.or}
-      <a class="disabled">Newer</a>
-    {.end}
-
-    <!-- older page -->
-    {.if pagination.nextPage}
-      <a href="{pagination.nextPageUrl}">Older</a>
-    {.or}
-      <a class="disabled">Older</a>
-    {.end}
-
-  </nav>
-{.end}
+<div class="attorneys-page-wrapper">
+    <div class="attorneys-list-wrapper">
+        {.repeated section items}
+        <a href={fullUrl} id="post-{id}" class="attorneys-list-item {@|item-classes}" data-item-id="{id}">
+            <img src="{customContent.listImage.assetUrl}" class="attorneys-list-image" alt="Image of attorney {title}" />
+            <h3 class="attorney-list-name">{title}</h3>
+        </a>
+        {.end}
+        <div class="attorneys-list-bg-color"></div>
+    </div>
 </div>

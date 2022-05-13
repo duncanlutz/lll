@@ -90,14 +90,15 @@
       </div>
 
     {.end}
+
     </div>
   </div>
-     <div class="attorney-breadcrumbs">
-        <a class="attorney-link home" href="/">
-            <div class="link-text">Home</div>
-            <div class="link-underline"></div>
+     <div class="breadcrumbs">
+        <a class="breadcrumb-link home" href="/">
+            <div class="breadcrumb-link-text">Home</div>
+            <div class="breadcrumb-link-underline"></div>
         </a>
-        <span class="attorney-slash">/</span>
+        <span class="breadcrumb-slash">/</span>
     </div>
 </nav>
 <nav class="mobile-nav">

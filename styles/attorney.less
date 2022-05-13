@@ -1,21 +1,47 @@
-.attorneys-list-wrapper {
-  width: 80vw;
+.attorneys-page-wrapper {
+  width: 100vw;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-
-  .attorneys-list-item {
+  background-image: url(../assets/bradyn-shock-3yno9AWLIu4-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+  .attorneys-list-wrapper {
+    width: 80%;
+    min-height: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 15%;
-    
-    .attorneys-list-image {
-      width: 100%;
+
+    .attorneys-list-bg-color {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: @main-blue;
+      opacity: .95;
+    }
+
+    .attorneys-list-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 15%;
+      z-index: 1;
+
+      .attorneys-list-image {
+        width: 100%;
+        border-radius: .2vw;
+      }
     }
   }
+
+
 }
 
 .attorney-wrapper {
@@ -37,7 +63,7 @@
     width: 100%;
     height: 100%;
     background-color: @color1;
-    opacity: .95;
+    opacity: 0.95;
     z-index: -1;
   }
 

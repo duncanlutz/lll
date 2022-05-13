@@ -13,8 +13,8 @@
     if (split.length === 1) {
       switch (s) {
         case "attorneys":
-          $(".attorney-breadcrumbs").append(`
-            <span class="attorney-link-name">
+          $(".breadcrumbs").append(`
+            <span class="cur-page-name">
             Attorneys
             </span>`);
           break;
@@ -25,10 +25,10 @@
     if (split.indexOf(s) === 0) {
       switch (s) {
         case "attorneys":
-          $(".attorney-breadcrumbs").append(`
-                <a class="attorney-link" href="/attorneys">
-                    <div class="link-text">Attorneys</div>
-                    <div class="link-underline"></div>
+          $(".breadcrumbs").append(`
+                <a class="breadcrumb-link" href="/attorneys">
+                    <div class="breadcrumb-link-text">Attorneys</div>
+                    <div class="breadcrumb-link-underline"></div>
                 </a>`);
           break;
       }
@@ -54,9 +54,9 @@
           finalName += `${tempWord} `;
         });
 
-        $(".attorney-breadcrumbs").append(`
-        <span class="attorney-slash">/
-            <span class="attorney-link-name">
+        $(".breadcrumbs").append(`
+        <span class="breadcrumb-slash">/
+            <span class="cur-page-name">
                 ${finalName.trim()}
             </span>
         </span>
