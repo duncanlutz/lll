@@ -2,11 +2,8 @@
 {.repeated section items}
 
   <a href={fullUrl} id="post-{id}" class="attorneys-list-item {@|item-classes}" data-item-id="{id}">
-    <!-- main image (thumbnail) -->
-    {.main-image?}
-        <img {@|image-meta} class="attorneys-list-image" alt="Image of attorney {title}" />
+        <img src="{customContent.listImage.assetUrl}" class="attorneys-list-image" alt="Image of attorney {title}" />
         <h3 class="attorney-list-name">{title}</h3>
-    {.end}
   </a>
 
 {.end}

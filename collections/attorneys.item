@@ -5,15 +5,14 @@
   <div id="post-{id}" class="{@|item-classes} attorney-wrapper" data-item-id="{id}">
   <div class="attorney-center">
   <!-- Attorney Photo / Featured Image -->
-    {.main-image?}
-        <img {@|image-meta} class="attorney-picture"/>
-    {.end}
+    <img src="{customContent.profileImage.assetUrl}" class="attorney-picture"/>
     <div class="attorney-copy">
     <!-- Attorney name / Title of blog post -->
         <div class="attorney-name">{title}</div>
         <!-- Attorney Description / Post body -->
         <div class="attorney-description">{body}</div>
-        <img {@|image-meta}
+
+
     </div>
     <div class="background-color"></div>
   </div>
