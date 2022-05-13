@@ -8,8 +8,8 @@
     {squarespace-headers}
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
   </head>
+  
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
-
     <div class="site-container">
 
       <header class="site-header">

@@ -4,17 +4,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   background-image: url(../assets/bradyn-shock-3yno9AWLIu4-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  
+
   .attorneys-list-wrapper {
     width: 80%;
     min-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 2vw;
 
     .attorneys-list-bg-color {
       position: fixed;
@@ -23,7 +25,7 @@
       width: 100vw;
       height: 100vh;
       background-color: @main-blue;
-      opacity: .95;
+      opacity: 0.95;
     }
 
     .attorneys-list-item {
@@ -33,15 +35,31 @@
       align-items: center;
       width: 15%;
       z-index: 1;
+      text-decoration: none;
+      gap: 0.75vw;
 
       .attorneys-list-image {
         width: 100%;
-        border-radius: .2vw;
+        border-radius: 0.2vw;
+        transition: transform 0.3s ease-in-out;
+        -webkit-box-shadow: 15px 15px 41px -15px rgba(0, 0, 0, 0.12);
+        box-shadow: 15px 15px 41px -15px rgba(0, 0, 0, 0.12);
+      }
+
+      .attorney-list-name {
+        font-weight: 300;
+        font-size: 1.25vw;
+        margin-top: 0;
+        color: #fff;
+      }
+
+      &:hover {
+        .attorneys-list-image {
+          transform: scale(1.03);
+        }
       }
     }
   }
-
-
 }
 
 .attorney-wrapper {
@@ -79,6 +97,11 @@
 
   .attorney-copy {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1vw;
 
     .attorney-name {
       font-weight: 500;
@@ -98,5 +121,7 @@
   .attorney-picture {
     width: 25%;
     border-radius: 0.25vw;
+    -webkit-box-shadow: 15px 15px 41px -15px rgba(0, 0, 0, 0.12);
+    box-shadow: 15px 15px 41px -15px rgba(0, 0, 0, 0.12);
   }
 }

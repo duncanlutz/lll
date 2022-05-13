@@ -3,7 +3,7 @@
   const loc = window.location.pathname;
 
   if (loc === "/") {
-    $(".attorney-breadcrumbs").empty();
+    $(".breadcrumbs").empty();
     return;
   }
 
