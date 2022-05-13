@@ -1,0 +1,28 @@
+
+{.section item}
+
+  <!--WRAPPER-->
+  <div id="post-{id}" class="{@|item-classes}" data-item-id="{id}">
+
+    <!--POST TILE-->
+    <h1 class="title" data-content-field="title">
+      {.passthrough?}
+        <a href="{sourceUrl}" target="_blank">{title}</a>
+      {.or}
+        {title}
+      {.end}
+    </h1>
+
+    <!--MAIN CONTENT-->
+    {body}
+
+    <!--BLOG INJECTION-->
+    {postItemInjectCode}
+
+    <!--SHARE AND LIKE-->
+    {@|like-button}
+    {@|social-button}
+
+  </div>
+
+{.end}

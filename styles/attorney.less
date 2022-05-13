@@ -1,79 +1,55 @@
 .attorney-wrapper {
-  background-color: @color1;
   width: 100vw;
   height: 100vh;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  background-image: url(../assets/bradyn-shock-3yno9AWLIu4-unsplash.jpg);
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-.attorney-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  height: 80%;
-}
-
-.attorney-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 1vw;
-}
-
-.attorney-breadcrumbs {
-  color: @color0;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0.25vw;
-  width: 25%;
-
-  .attorney-link {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-decoration: none;
-    gap: 0.125vw;
-
-    &:hover {
-      .link-underline {
-        width: 100%;
-      }
-    }
-
-    .link-text {
-      text-decoration: none;
-      color: @color0;
-      font-weight: 100;
-      user-select: none;
-    }
-
-    .link-underline {
-      width: 0;
-      height: 1.5px;
-      background-color: @color0;
-      transition: width 0.5s cubic-bezier(0.77, 0.36, 0.25, 0.81);
-    }
+  .background-color {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: @color1;
+    opacity: .95;
   }
 
-  .attorney-slash {
+  .attorney-center {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 100;
-    gap: 0.25vw;
-    user-select: none;
+    width: 80%;
+    height: 80%;
+    gap: 4vw;
+    z-index: 1;
   }
-}
 
-.attorney-link-name {
-  font-weight: 500;
-  user-select: none;
-}
+  .attorney-copy {
+    width: 50%;
 
-.attorney-picture {
-  width: 25%;
-  border-radius: 0.25vw;
+    .attorney-name {
+      font-weight: 500;
+      font-size: 3vw;
+      color: #fff;
+    }
+
+    .attorney-description {
+      p {
+        font-size: 1.2vw;
+        font-weight: 300;
+        color: #fff;
+      }
+    }
+  }
+
+  .attorney-picture {
+    width: 25%;
+    border-radius: 0.25vw;
+  }
 }
