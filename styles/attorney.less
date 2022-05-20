@@ -11,12 +11,14 @@
   background-position: center;
 
   .attorneys-list-wrapper {
-    width: 80%;
+    width: 90%;
     min-height: 100%;
+    margin-top: 10%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: 2vw;
+    align-items: flex-start;
+    gap: 3vw;
 
     .attorneys-list-bg-color {
       position: fixed;
@@ -33,30 +35,28 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 15%;
+      width: 20%;
       z-index: 1;
       text-decoration: none;
-      gap: 0.75vw;
+      gap: 1.2vw;
+      transition: transform 0.3s ease-in-out;
 
       .attorneys-list-image {
         width: 100%;
-        border-radius: 0.2vw;
-        transition: transform 0.3s ease-in-out;
+        border-radius: 0.4vw;
         -webkit-box-shadow: 15px 15px 41px -15px rgba(0, 0, 0, 0.12);
         box-shadow: 15px 15px 41px -15px rgba(0, 0, 0, 0.12);
       }
 
       .attorney-list-name {
         font-weight: 300;
-        font-size: 1.25vw;
+        font-size: 1.5vw;
         margin-top: 0;
         color: #fff;
       }
 
       &:hover {
-        .attorneys-list-image {
-          transform: scale(1.03);
-        }
+        transform: scale(1.03);
       }
     }
   }

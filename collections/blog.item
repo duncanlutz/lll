@@ -2,9 +2,10 @@
 {.section item}
 
   <!--WRAPPER-->
-  <article id="post-{id}" class="{@|item-classes}" data-item-id="{id}">
+  <div id="post-{id}" class="blog-post-wrapper {@|item-classes}" data-item-id="{id}">
 
     <!--POST TILE-->
+    <div class="body-centered">
     <h1 class="title" data-content-field="title">
       {.passthrough?}
         <a href="{sourceUrl}" target="_blank">{title}</a>
@@ -13,10 +14,21 @@
       {.end}
     </h1>
 
-    <!--AUTHOR AND DATE-->
-    <p class="meta">
-      <a href="{fullUrl}" class="permalink"><time datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y}</time></a> by <a href="{collection.fullUrl}?author={author.id}">{author.displayName}</a>
-    </p>
+        <div class="tags-wrapper">
+      <!--CATEGORIES-->
+      {.repeated section categories}
+        <a class="category" href="{collection.fullUrl}?category={@|url-encode}">{@}</a>{.alternates with}<div class="comma">,</div>
+      {.end}
+
+      <!--TAGS-->
+      {.repeated section tags}
+        <a class="tag" href="{collection.fullUrl}?tag={@|url-encode}"><ion-icon name="pricetag"></ion-icon>{@}</a>{.alternates with}<div class="comma">,</div>
+      {.end}
+    </div>
+
+    <div class="blog-line"></div>
+
+    <div class="blog-post-image" style='background-image: url({assetUrl})'></div>
 
     <!--MAIN CONTENT-->
     {body}
@@ -24,20 +36,11 @@
     <!--BLOG INJECTION-->
     {postItemInjectCode}
 
-    <!--CATEGORIES-->
-    {.repeated section categories}
-      <a class="category" href="{collection.fullUrl}?category={@|url-encode}">{@}</a>{.alternates with},
-    {.end}
 
-    <!--TAGS-->
-    {.repeated section tags}
-      <a class="tag" href="{collection.fullUrl}?tag={@|url-encode}">{@}</a>{.alternates with},
-    {.end}
 
     <!--SHARE AND LIKE-->
     {@|like-button}
     {@|social-button}
-
 
     <!--LOCATION-->
     {.section location}
@@ -49,13 +52,11 @@
       {.end}
     {.end}
 
-    <!--COMMENTS-->
-    {@|comments}
+  </div>
 
-  </article>
+</div>
 
 {.end}
-
 
 <!--PAGINATION-->
 {.section pagination}

@@ -1,0 +1,40 @@
+.description-box {
+  background-color: @main-blue;
+  color: @color0;
+  padding: clamp(1rem, 10vw, 20rem) 0 clamp(1rem, 11vw, 20rem) 0;
+  width: @width6;
+}
+
+h1.description-title {
+  font-size: clamp(2rem, 3.5vw + 0.3rem, 10rem);
+  margin-bottom: 1rem;
+  padding-left: @global-left;
+  padding-right: 0;
+  padding-right: 42vw;
+}
+
+.description-paragraph {
+  font-size: clamp(0.5rem, 1vw + 1rem, 20rem);
+  font-weight: 300;
+  line-height: clamp(1.3rem, 2vw, 10rem);
+  margin-top: 0;
+  padding-left: @global-left;
+  padding-right: 8vw;
+  padding-right: clamp(1rem, 20vw, 30rem);
+}
+
+@media (max-width: 400px) {
+  h1.description-title {
+    padding-right: 0;
+  }
+
+  .description-paragraph {
+    padding-right: 8vw;
+  }
+}
+
+@media (max-width: 550px) {
+  h1.description-title {
+    padding-right: 20vw;
+  }
+}

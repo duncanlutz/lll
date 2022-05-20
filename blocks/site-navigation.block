@@ -18,7 +18,7 @@
         <div class="nav-wrapper">
         <div class="nav-main-line">
             <div class="nav-left">
-                <a href="#home">
+                <a href="/#home">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 673 234"
                         style="enable-background:new 0 0 673 234;" xml:space="preserve" class="logo-image">
@@ -59,16 +59,16 @@
             </div>
   <div class="nav-right">
     <div class="nav-button practices">
-      <a class="nav-button practices" href="#practices">Practices</a>
+      <a class="nav-button practices" href="/#practices">Practices</a>
     </div>
     <div class="nav-button our-team">
-      <a class="nav-button our-team" href="#team">Our Team</a>
+      <a class="nav-button our-team" href="/#team">Our Team</a>
     </div>
     <div class="nav-button testimonials">
-      <a class="nav-button testimonials" href="#testimonials">Testimonials</a>
+      <a class="nav-button testimonials" href="/#testimonials">Testimonials</a>
     </div>
     <div class="nav-button contact">
-      <a class="nav-button contact" href="#contact">Contact</a>
+      <a class="nav-button contact" href="/#contact">Contact</a>
     </div>
 
     {.repeated section items}

@@ -1,0 +1,88 @@
+.practices-box {
+  background-color: @dbackground-blue;
+  color: @color0;
+  padding: clamp(1rem, 10vw, 20rem) 0 clamp(1rem, 11vw, 20rem) 0;
+  position: relative;
+  width: @width6;
+}
+
+h1.practices-title {
+  font-size: clamp(2rem, 2.5vw + 0.3rem, 10rem);
+  margin-bottom: 1rem;
+  padding-left: @global-left;
+  padding-right: 42vw;
+}
+
+.practices-content {
+  color: @color0;
+  display: flex;
+  flex-direction: column;
+}
+
+.practices-content-item {
+  align-items: center;
+  display: flex;
+  gap: 4vw;
+  justify-content: flex-start;
+  margin-bottom: clamp(1rem, 3vw, 5rem);
+  padding-left: @global-left;
+  padding-right: 20vw;
+  transition: all 0.6s ease-in-out;
+}
+
+.practices-content-right {
+  width: 60%;
+  width: @width25;
+}
+
+.practices-content-title {
+  font-size: clamp(0.5rem, 1vw + 1rem, 20rem);
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.practices-content-paragraph {
+  font-size: clamp(0.5rem, 1vw + 1rem, 20rem);
+  font-weight: 100;
+}
+
+.practices-content-image {
+  aspect-ratio: 1.2;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+  height: 90%;
+  width: 30%;
+}
+
+.pract-photos-bg {
+  background-image: url('../assets/bradyn-shock-NGzIGVj45qA-unsplash.jpg');
+  background-position-y: bottom;
+  z-index: 0;
+}
+
+@media (max-width: 1000px) {
+  .practices-content-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 5vw;
+    margin-bottom: clamp(1rem, 8vw, 5rem);
+  }
+
+  .practices-content-right {
+    width: 95%;
+  }
+
+  .content-item-right {
+    text-align: left;
+  }
+
+  .practices-content-image {
+    width: 95%;
+  }
+
+  .swiper {
+    width: 90%;
+  }
+}

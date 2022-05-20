@@ -1,42 +1,36 @@
-
-{.section categoryFilter}
-  <p class="filtered-by">Filtered by Category: {@|safe}</p>
-{.end}
-
-{.section tagFilter}
-  <p class="filtered-by">Filtered by Tag: {@|safe}</p>
-{.end}
-
-{.if authorFilter}
-  <p class="filtered-by">Filtered by Author: {author.displayName}</p>
-{.end}
-
+    <header class="blog-wrapper">
+        <div class="blog-head">
+            <h1>Blog</h1>
+            <div class="blog-search">
+                <ion-icon class="search-icon" name="search-outline"></ion-icon>
+                <ion-icon class="blog-display-none close-icon" name="close-outline"></ion-icon>
+                <input type="text" placeholder="Type something here..." class="search-box inactive-search"></input>
+            </div>
+        </div>
+        <div class="blog-body">
+            <div class="lds-spinner blog-hidden"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            <h1 class="search-empty blog-hidden blog-display-none">Your search returned no results</h1>
 <!-- item loop -->
 {.repeated section items}
 
-  <article id="post-{id}" class="blog-list-item {@|item-classes}" data-item-id="{id}">
+  <a href="{fullUrl}" id="post-{id}" class="blog-post {@|item-classes}" data-item-id="{id}" data-tags="{tags}">
     <!-- main image (thumbnail) -->
     {.main-image?}
-      <a href="{fullUrl}" class="main-image content-fill">
-        <img {@|image-meta} />
-      </a>
+      <div class="blog-image" style="background-image: url({assetUrl})"></div>
+      <div class="blog-lower">
+        <div class="blog-title">{title}</div>
+        <div class="blog-sum" id="sum-{id}">
+        {body|safe|truncate 110}</div>
+        <div class="blog-info">
+          <div class="blog-line"></div>
+          <div class="blog-date">{addedOn|date %B %d, %Y}</div>
+          {@|like-button}
+        </div>
+      </div>
+
+          
     {.end}
-    <!-- post title -->
-    <h1 class="title" data-content-field="title">
-      {.passthrough?}
-        <a href="{sourceUrl}" target="_blank">{title}</a>
-      {.or}
-        <a href="{fullUrl}">{title}</a>
-      {.end}
-    </h1>
-    <!-- excerpt or body -->
-    {.if excerpt}
-      {excerpt}
-      <a class="link" href="{fullUrl}">Read More</a>
-    {.or}
-      {body}
-    {.end}
-  </article>
+  </a>
 
 {.or}
 
@@ -44,6 +38,9 @@
   <p><em>No blog posts yet.</em></p>
 
 {.end}
+
+        </div>
+    </header>
 
 <!-- pagination -->
 {.if pagination}

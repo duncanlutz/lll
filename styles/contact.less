@@ -1,0 +1,211 @@
+.contact-us {
+  background-color: @main-blue;
+  padding-left: @global-left;
+  padding: clamp(1rem, 10vw, 20rem) 0 clamp(1rem, 11vw, 20rem) 0;
+  width: @width6;
+}
+
+h1.contact-title {
+  font-size: clamp(2rem, 3.5vw + 0.3rem, 10rem);
+  margin-bottom: 1rem;
+  padding-left: @global-left;
+  padding-right: 42vw;
+}
+
+.contact-us > form {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  padding-left: @global-left;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.f-sec-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8vw;
+}
+
+.f-line {
+  color: @color0;
+  display: flex;
+  gap: 8vw;
+}
+
+.input-div {
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(1rem, 1vw, 5rem);
+  gap: 0.5vw;
+  justify-content: flex-start;
+}
+
+.input-div > input {
+  aspect-ratio: 12;
+  border-radius: 1vw;
+  border: 0;
+  font-size: clamp(1rem, 1vw, 5rem);
+  padding-left: 1vw;
+  width: 30vw;
+}
+
+#input-textarea {
+  aspect-ratio: 5;
+  border-radius: 1vw;
+  border: 0;
+  font-family: 'Metropolis';
+  font-size: clamp(1rem, 1vw, 5rem);
+  padding: 1vw 1vw 1vw 1vw;
+  resize: none;
+  width: 68vw;
+}
+
+.f-one {
+  flex-direction: column;
+  gap: 2vw;
+}
+
+.f-two {
+  flex-direction: column;
+  gap: 2vw;
+}
+
+.modal-name {
+  margin-top: 0;
+}
+
+.content-item-right {
+  text-align: left;
+}
+
+#input-message {
+  display: none;
+}
+
+.input-div > select {
+  aspect-ratio: 12;
+  border-radius: 1vw;
+  border-right: 1vw solid transparent;
+  border: 0;
+  color: @dark-blue;
+  font-size: clamp(1rem, 1vw, 5rem);
+  padding-left: 1vw;
+  width: 31vw;
+  cursor: pointer;
+}
+
+option {
+  display: none;
+}
+
+.options-wrapper {
+  border-radius: 1vw;
+  color: @dark-blue;
+  display: flex;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  opacity: 0;
+  position: absolute;
+  transform: translateY(0);
+  transition: transform 0.5s cubic-bezier(0.68, 0.3, 0.38, 0.9),
+    opacity 0.5s ease-in-out;
+  -webkit-box-shadow: 5px 7px 21px 0px rgba(0, 0, 0, 0.21);
+  box-shadow: 5px 7px 21px 0px rgba(0, 0, 0, 0.21);
+}
+
+.select-option {
+  background-color: @color0;
+  cursor: pointer;
+  padding: 1vw 0 1vw 0;
+  padding: 1vw 1vw 1vw 1vw;
+  transition: all 0.3s ease-in-out;
+  width: 29vw;
+
+  &:hover {
+    background-color: @light-main-blue;
+    color: @color0;
+  }
+}
+
+.select-menu-active {
+  opacity: 1;
+  transform: translateY(4.5vw);
+}
+
+.top-option {
+  border-radius: 1vw 1vw 0 0;
+}
+
+.bottom-option {
+  border-radius: 0 0 1vw 1vw;
+}
+
+.sub-button {
+  background-color: white;
+  border-radius: 3rem;
+  border: 0;
+  color: @dark-blue;
+  cursor: pointer;
+  font-family: 'Metropolis';
+  font-size: clamp(1rem, 1vw, 10rem);
+  font-weight: 100;
+  padding: 0.8rem 2rem;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.error-box {
+  color: #ff0000;
+  min-height: 1vw;
+  padding-right: 4vw;
+}
+
+.message-success {
+  align-items: flex-start;
+  color: @color0;
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(0.1rem, 0.3vw + 1rem, 20rem);
+  gap: 1vw;
+  justify-content: center;
+  padding-left: @global-left;
+  padding-right: 4vw;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.m-line-3 > a {
+  color: @color0;
+}
+
+.m-line-1 {
+  font-size: clamp(2rem, 3.5vw + 0.3rem, 10rem);
+  font-weight: 600;
+}
+
+@media (max-width: 550px) {
+  .f-one {
+    flex-direction: column;
+    gap: 2vw;
+  }
+
+  .f-two {
+    flex-direction: column;
+    gap: 2vw;
+  }
+
+  .input-div > select {
+    width: 76vw;
+  }
+
+  .input-div > input {
+    width: 75vw;
+  }
+
+  #input-textarea {
+    width: 75vw;
+  }
+}

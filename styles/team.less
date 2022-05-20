@@ -1,0 +1,127 @@
+.our-team-box {
+  background-color: @main-blue;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1rem, 10vw, 20rem) 0 clamp(1rem, 11vw, 20rem) 0;
+  width: @width6;
+}
+
+h1.our-team-title {
+  font-size: clamp(2rem, 3.5vw + 0.3rem, 10rem);
+  margin-bottom: 1rem;
+  padding-left: @global-left;
+  padding-right: 42vw;
+}
+
+.swiper {
+  // width: @width20;
+  width: @width21;
+}
+
+.swiper-slide {
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  text-align: center;
+}
+
+.profile-section {
+  width: 100%;
+}
+
+.slider-wrapper {
+  transition-timing-function: cubic-bezier(0.72, 0.26, 0.37, 0.92);
+}
+
+.image-wrapper {
+  align-items: center;
+  aspect-ratio: 1/2;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-wrapper > img {
+  padding: 0 2rem;
+}
+
+.team-profile-item {
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 0.3s cubic-bezier(0.72, 0.26, 0.37, 0.92);
+
+  img {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 0.5rem;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.swiper-pagination-bullet {
+  background: @color0;
+}
+
+.swiper-pagination-bullet-active {
+  background: @color0;
+}
+
+.swiper-button-next.p-nav-button-next {
+  color: #fff;
+  fill: @color0;
+}
+
+.swiper-button-prev.p-nav-button-prev {
+  color: #fff;
+  fill: @color0;
+}
+
+.swiper-container-rtl {
+  .swiper-button-prev {
+    fill: @color0;
+  }
+
+  .swiper-button-next {
+    fill: @color0;
+  }
+}
+
+.profile-name {
+  font-weight: 300;
+}
+
+.p-nav-button-next {
+  color: @color0;
+  cursor: pointer;
+  font-size: 3rem;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.p-nav-button-prev {
+  color: @color0;
+  cursor: pointer;
+  font-size: 3rem;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

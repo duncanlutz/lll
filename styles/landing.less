@@ -1,0 +1,87 @@
+.landing {
+  display: flex;
+  height: @height2;
+  justify-content: center;
+  width: @width6;
+}
+
+.landing-wrapper {
+  align-items: flex-start;
+  background-image: url(../assets/bradyn-shock-NGzIGVj45qA-unsplash.jpg);
+  background-position: 50% 52%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  padding-left: @global-left;
+  padding-top: 1vw;
+  position: relative;
+  width: @width7;
+}
+
+.l-text {
+  animation: landing-anim 1s cubic-bezier(0.67, 0.25, 0.42, 0.89) 0s 1 forwards;
+  display: inline-block;
+  font-size: clamp(5rem, 9vw, 21rem);
+  opacity: 0;
+  z-index: 2;
+}
+
+.landing-text {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.landing-text-l1 {
+  margin: 0;
+}
+
+.landing-text-l2 {
+  margin: 0;
+}
+
+.cb-wrapper {
+  animation: landing-anim 1s cubic-bezier(0.67, 0.25, 0.42, 0.89) 1000ms 1 both;
+}
+
+.consult-button {
+  background-color: white;
+  border-radius: 3rem;
+  border: 0;
+  color: @dark-blue;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Metropolis';
+  font-size: clamp(1rem, 1vw, 10rem);
+  font-weight: 100;
+  padding: 0.8rem 1rem;
+  padding: 0.8rem 2rem;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    -webkit-box-shadow: 7px 7px 25px 5px rgba(0, 0, 0, 0.15);
+    -webkit-transform: scale(1.05);
+    box-shadow: 7px 7px 25px 5px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .l-text {
+    animation-name: none;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 400px) {
+  .consult-button {
+    padding: 0.8rem 1rem;
+  }
+}
