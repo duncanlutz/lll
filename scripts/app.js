@@ -337,7 +337,12 @@ const checkForm = (e) => {
       contUs.append(
         `<div class="message-success hidden"><span class="m-line-1">Your message has been recieved.</span><span class="m-line-2">We'll review the details you provided and get back to you as soon as possible.</span><span class="m-line-3">If your message is urgent, please call us at <a href="tel:8014466464">(801) 446-6464</a></span></div>`
       );
-      contUs.css("display", "flex").css("align-items", "center");
+      contUs
+        .css("display", "flex")
+        .css("align-items", "flex-start")
+        .css("flex-direction", "column")
+        .css('gap', '10%');
+
       setTimeout(() => {
         $(".message-success").removeClass("hidden");
       }, 100);
