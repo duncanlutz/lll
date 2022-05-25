@@ -100,7 +100,21 @@
   background-position-y: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-bottom: 10%;
   padding-top: 13%;
+
+  @media (max-width: 1500px) {
+    align-items: center;
+    padding-top: 15%;
+  }
+
+  @media (max-width: 1150px) {
+    padding-top: 20%;
+  }
+
+  @media (max-width: 850px) {
+    padding-top: 25%;
+  }
 
   .background-color {
     position: absolute;
@@ -120,6 +134,11 @@
     width: 90%;
     gap: 4vw;
     z-index: 1;
+
+    @media (max-width: 1500px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   .attorney-copy {
@@ -130,10 +149,22 @@
     align-items: flex-start;
     gap: 1vw;
 
+    @media (max-width: 1500px) {
+      width: 50%;
+    }
+
+    @media (max-width: 1150px) {
+      width: 70%;
+    }
+
     .attorney-name {
       font-weight: 500;
       font-size: 3vw;
       color: #fff;
+
+      @media (max-width: 1500px) {
+        font-size: 6vw;
+      }
     }
 
     .attorney-description {
@@ -141,6 +172,9 @@
         font-size: 1.2vw;
         font-weight: 300;
         color: #fff;
+        @media (max-width: 1500px) {
+          font-size: 3vw;
+        }
       }
     }
   }
@@ -150,5 +184,17 @@
     border-radius: 0.25vw;
     -webkit-box-shadow: 15px 15px 41px -15px rgba(0, 0, 0, 0.12);
     box-shadow: 15px 15px 41px -15px rgba(0, 0, 0, 0.12);
+
+    @media (max-width: 1500px) {
+      width: 50%;
+    }
+
+    @media (max-width: 1150px) {
+      width: 70%;
+    }
+  
+    @media (max-width: 850px) {
+      // padding-top: 25%;
+    }
   }
 }

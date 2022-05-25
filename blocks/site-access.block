@@ -1,0 +1,16 @@
+<div class="accessibility">
+        <div class="accessibility-menu menu-hidden">
+            <a href="#landing-header" class="accessibility-button skip-to-content" onclick="closeAccessButton()"
+                tabindex="1">Skip to Main Content</a>
+            <div class="am-divider"></div>
+            <button class="accessibility-button high-contrast" onclick="activateMenu('high-contrast')"
+                tabindex="2">Higher Contrast</button>
+            <div class="am-divider"></div>
+            <button class="am-close-button">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        </div>
+        <button class="accessibility-menu-button">
+            <ion-icon name="accessibility-outline"></ion-icon>
+        </button>
+    </div>

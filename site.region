@@ -11,15 +11,16 @@
   
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
       <div class="side-menu mob-nav-hidden">
-        <button class="mob-close-button" onclick="closeMobNav()">
+        <button class="mob-close-button" onclick="closeMobNav();">
             <ion-icon name="close-sharp"></ion-icon>
         </button>
         <div class="mob-menu-buttons">
-            <a class="nav-button practices mobile-button" onclick="closeMobNav()" href="#practices">Practices</a>
-            <a class="nav-button our-team mobile-button" onclick="closeMobNav()" href="#team">Our Team</a>
-            <a class="nav-button testimonials mobile-button" onclick="closeMobNav()"
-                href="#testimonials">Testimonials</a>
-            <a class="nav-button blog mobile-button" onclick="closeMobNav()" href="blog">Blog</a>
+        <a class="nav-button home mobile-button" onclick="closeMobNav('/');"href="/#home">Home</a>
+            <a class="nav-button practices mobile-button" onclick="closeMobNav('/');"href="/#practices">Practices</a>
+            <a class="nav-button testimonials mobile-button" 
+                onclick="closeMobNav('/');"href="/#testimonials">Testimonials</a>
+            <a class="nav-button attorneys mobile-button" onclick="closeMobNav('/attorneys');"href="/attorneys">Attorneys</a>
+            <a class="nav-button blog mobile-button" onclick="closeMobNav('/blog');"href="/blog">Blog</a>
         </div>
     </div>
     <div class="site-container">
@@ -27,7 +28,7 @@
         <!-- site navigation -->
         <squarespace:navigation navigationId="siteNav" template="site-navigation" />
       </header>
-
+    {@|apply site-access.block}
       <!-- cms content injection point -->
       <main class="content-container" role="main" data-content-field="main-content">
        {squarespace.main-content}

@@ -2,34 +2,6 @@
 <head>
 </head>
 <body>
-    <div class="side-menu mob-nav-hidden">
-        <button class="mob-close-button" onclick="closeMobNav()">
-            <ion-icon name="close-sharp"></ion-icon>
-        </button>
-        <div class="mob-menu-buttons">
-            <a class="nav-button practices mobile-button" onclick="closeMobNav()" href="#practices">Practices</a>
-            <a class="nav-button our-team mobile-button" onclick="closeMobNav()" href="#team">Our Team</a>
-            <a class="nav-button testimonials mobile-button" onclick="closeMobNav()"
-                href="#testimonials">Testimonials</a>
-            <a class="nav-button blog mobile-button" onclick="closeMobNav()" href="blog">Blog</a>
-        </div>
-    </div>
-    <div class="accessibility">
-        <div class="accessibility-menu menu-hidden">
-            <a href="#landing-header" class="accessibility-button skip-to-content" onclick="closeAccessButton()"
-                tabindex="1">Skip to Main Content</a>
-            <div class="am-divider"></div>
-            <button class="accessibility-button high-contrast" onclick="activateMenu('high-contrast')"
-                tabindex="2">Higher Contrast</button>
-            <div class="am-divider"></div>
-            <button class="am-close-button">
-                <ion-icon name="close-outline"></ion-icon>
-            </button>
-        </div>
-        <button class="accessibility-menu-button">
-            <ion-icon name="accessibility-outline"></ion-icon>
-        </button>
-    </div>
     <section class="landing" id="home">
         <div class="landing-wrapper">
             <div class="landing-text">

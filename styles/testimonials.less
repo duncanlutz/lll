@@ -21,7 +21,7 @@ h1.testimonials-title {
 }
 
 .testimonial-holder {
-  font-size: clamp(0.5rem, 1vw + 1rem, 20rem);
+  font-size: clamp(1rem, 1vw + 1rem, 20rem);
   font-weight: 100;
   padding-left: 5vw;
   padding-right: 2vw;
@@ -102,5 +102,12 @@ h1.testimonials-title {
   .testimonial-holder {
     padding-left: 5vw;
     padding-right: 2vw;
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonial-holder {
+    width: 60%;
   }
 }
