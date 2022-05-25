@@ -82,7 +82,7 @@ const closeMobNav = (t) => {
   if (t == null) {
     return;
   }
-  
+
   if (t === window.location.pathname) {
     if ($(".side-menu").hasClass("mob-nav-hidden")) {
       return;
@@ -93,34 +93,6 @@ const closeMobNav = (t) => {
     return;
   }
 };
-
-// $(".mobile-button").on("click", (e) => {
-//   let curTarg;
-//   switch (true) {
-//     case e.target.classList.contains("practices"):
-//       curTarg = "/";
-//       break;
-//     case e.target.classList.contains("testimonials"):
-//       curTarg = "/";
-//       break;
-//     case e.target.classList.contains("attorneys"):
-//       curTarg = "/attorneys";
-//       break;
-//     case e.target.classList.contains("blog"):
-//       curTarg = "/blog";
-//       break;
-//   }
-
-//   if (curTarg === window.location.pathname) {
-//     if ($(".side-menu").hasClass("mob-nav-hidden")) {
-//       return;
-//     }
-
-//     $(".side-menu").addClass("mob-nav-hidden");
-//     $("body").css("overflow", "unset");
-//     return;
-//   }
-// });
 
 const hideAccess = (e) => {
   if (e[0].isIntersecting) {

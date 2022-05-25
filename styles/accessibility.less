@@ -20,7 +20,7 @@
     background-color: rgba(0, 0, 0, 0);
     border: 0;
     color: @color0;
-    color: @main-blue;
+    color: var(--main-blue);
     cursor: pointer;
     font-size: 1rem;
     outline: 0;
@@ -34,14 +34,14 @@
   
     &:focus {
       border-radius: 0.2rem;
-      outline: 1px solid @main-blue;
+      outline: 1px solid var(--main-blue);
     }
   }
   
   .am-close-button {
     background-color: rgba(0, 0, 0, 0);
     border: 0;
-    color: @main-blue;
+    color: var(--main-blue);
     cursor: pointer;
     font-size: 1.5rem;
     outline: 0;
@@ -69,7 +69,7 @@
   }
   
   .accessibility-button.access-active {
-    background-color: @main-blue;
+    background-color: var(--main-blue);
     color: @color0;
   }
   
@@ -79,7 +79,7 @@
     background-color: @color0;
     border-radius: 100%;
     border: 0;
-    color: @main-blue;
+    color: var(--main-blue);
     cursor: pointer;
     display: flex;
     font-size: clamp(2rem, 2vw, 10rem);

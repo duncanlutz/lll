@@ -41,15 +41,18 @@
 .tb-link {
   background-color: rgba(0, 0, 0, 0);
   border: 0;
-  color: @main-blue;
+  color: var(--main-blue);
   cursor: pointer;
   text-decoration: none;
   white-space: nowrap;
+  font-size: 1rem;
+  font-weight: 100;
 }
 
 .tb-right {
   align-items: center;
   display: flex;
+  gap: 0.2vw;
 }
 
 .tb-left {
@@ -90,9 +93,17 @@
   fill: @color0;
   width: 50%;
   width: clamp(2rem, 30vw, 10rem);
+  transition: transform .3s ease-in-out;
 
   &:hover {
-    fill: rgb(236, 236, 236);
+    transform: scale(1.05);
+  }
+}
+
+.nav-button {
+  transition: transform .3s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
   }
 }
 
@@ -147,14 +158,14 @@ nav.mobile-nav {
 }
 
 .mobile-button {
-  color: @main-blue;
+  color: var(--main-blue);
   font-size: 3rem;
 }
 
 .mob-close-button {
   background-color: rgba(0, 0, 0, 0);
   border: 0;
-  color: @main-blue;
+  color: var(--main-blue);
   font-size: 3rem;
   position: relative;
 }

@@ -5,10 +5,10 @@
                     Call Us: <a href="tel:8014466464" class="tb-link {.section active} active-link{.end}">(801) 446-6464</a>
                 </div>
                 <div class="tb-right">
-                    <button class="tb-link request-consultation">
+                    <a href="/#contact" class="tb-link request-consultation">
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         Request a Free Consultation
-                    </button>
+                    </a>
                     <button class="spanish-button tb-link">
                         Español
                     </button>
