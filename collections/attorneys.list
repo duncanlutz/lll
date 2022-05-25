@@ -2,7 +2,11 @@
     <div class="attorneys-list-wrapper">
         {.repeated section items}
         <a href={fullUrl} id="post-{id}" class="attorneys-list-item {@|item-classes}" data-item-id="{id}">
+        {.section customContent.listImage.assetUrl}
             <img src="{customContent.listImage.assetUrl}" class="attorneys-list-image" alt="Image of attorney {title}" />
+        {.or}
+            <img src="{customContent.profileImage.assetUrl}" class="attorneys-list-image" alt="Image of attorney {title}" />
+        {.end}
             <h3 class="attorney-list-name">{title}</h3>
         </a>
         {.end}

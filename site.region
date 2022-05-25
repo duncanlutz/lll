@@ -10,8 +10,19 @@
   </head>
   
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
+      <div class="side-menu mob-nav-hidden">
+        <button class="mob-close-button" onclick="closeMobNav()">
+            <ion-icon name="close-sharp"></ion-icon>
+        </button>
+        <div class="mob-menu-buttons">
+            <a class="nav-button practices mobile-button" onclick="closeMobNav()" href="#practices">Practices</a>
+            <a class="nav-button our-team mobile-button" onclick="closeMobNav()" href="#team">Our Team</a>
+            <a class="nav-button testimonials mobile-button" onclick="closeMobNav()"
+                href="#testimonials">Testimonials</a>
+            <a class="nav-button blog mobile-button" onclick="closeMobNav()" href="blog">Blog</a>
+        </div>
+    </div>
     <div class="site-container">
-
       <header class="site-header">
         <!-- site navigation -->
         <squarespace:navigation navigationId="siteNav" template="site-navigation" />
@@ -23,12 +34,45 @@
       </main>
 
     </div>
+    
+    <footer>
+    <div class="footer-wrapper">
+        <div class="footer-left">
+            <a href="https://www.facebook.com/lowlunlof" target="_blank">
+                <ion-icon name="logo-facebook" class="social-logo"></ion-icon>
+            </a>
+            <a href="https://www.linkedin.com/company/lowrance-lundell-lofgren" target="_blank">
+                <ion-icon name="logo-linkedin" class="social-logo"></ion-icon>
+            </a>
+            <a href="https://twitter.com/LowLunLof" target="_blank">
+                <ion-icon name="logo-twitter" class="social-logo"></ion-icon>
+            </a>
+        </div>
+        <div class="footer-right">
+            <div class="footer-text">
+                <span class="foot-line-1">
+                    Phone: (801) 446-6464
+                </span>
+                <span class="foot-line-2">
+                    Fax: 801-254-0303
+                </span>
+                <span class="foot-line-3">
+                    1099 W South Jordan Pkwy, South Jordan, Utah 84095
+                </span>
+                <span class="foot-line-4">
+                    ©2022 by Lowrance Lundell Lofgren
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
 
     <!-- combo and minify scripts when not logged in -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <squarespace:script src="swiper.js" />
     <squarespace:script src="jquery.js" />
+    <squarespace:script src="image-preload.js" />
     <squarespace:script src="load-attorneys.js" />
     <squarespace:script src="breadcrumbs.js" />
     <squarespace:script src="email.js" />

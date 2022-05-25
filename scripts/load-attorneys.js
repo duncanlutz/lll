@@ -1,4 +1,7 @@
 attorneyHtmlString = `<div class="profile-section swiper-wrapper">\n`;
+let stop = false;
+let frameCount = 0;
+let prevMenuNumber, fps, fpsInterval, startTime, now, then, elapsed;
 
 (async () => {
   const path = window.location.pathname;
@@ -19,50 +22,13 @@ attorneyHtmlString = `<div class="profile-section swiper-wrapper">\n`;
     })
     .catch((error) => console.log("error", error));
 
-    console.log(attorneys);
-
-    attorneys.forEach(attorney => {
-        attorneyHtmlString += `<div class="team-profile-item swiper-slide">\n<a href="${attorney.fullUrl}" class="image-wrapper test">\n<img src="${attorney.assetUrl}" class="profile-image" alt="Image of attorney ${attorney.title}" />\n</a>\n</div>`;
-    })
-    attorneyHtmlString += `  </div>\n<div class="p-nav-button-next back-button swiper-button-next"></div>\n<div class="p-nav-button-prev forward-button swiper-button-prev"></div>\n<div class="p-pagination pagination"></div>`
-    $('.profile-wrapper').html(attorneyHtmlString)
-})();
-
-let stop = false;
-let frameCount = 0;
-let prevMenuNumber, fps, fpsInterval, startTime, now, then, elapsed;
-
-const sliders = document.querySelectorAll(".swiper");
-
-const setMenu = (newNumber, space) => {
-    $(".profile-wrapper").html(`
-      <div class="profile-section swiper-wrapper">
-      <div class="team-profile-item swiper-slide">
-          <a href="attorneys?john-lowrance" class="image-wrapper test">
-              <img src="../assets/John_Headshot.png" class="profile-image john_l" alt="Image of John Lowrance">
-          </a>
-      </div>
-      <div class="team-profile-item swiper-slide">
-          <a href="attorneys?rick-lundell" class="image-wrapper">
-              <img src="../assets/Rick_Headshot.png" class="profile-image rick_l" alt="Image of Rick Lundell">
-          </a>
-      </div>
-      <div class="team-profile-item swiper-slide">
-          <a href="attorneys?brian-lofgren" class="image-wrapper">
-              <img src="../assets/Brian_Headshot.png" class="profile-image brian_l"
-                  alt="Image of Brian Lofgren">
-          </a>
-      </div>
-      <div class="team-profile-item pi-inactive swiper-slide">
-          <a href="attorneys?duncan-lutz" class="image-wrapper">
-              <img src="../assets/Duncan_Headshot.png" class="profile-image" alt="Image of Duncan Lutz">
-          </a>
-      </div>
-  </div>
-  <div class="p-nav-button-next back-button swiper-button-next"></div>
-  <div class="p-nav-button-prev forward-button swiper-button-prev"></div>
-  <div class="p-pagination pagination"></div>`);
-  
+  attorneys.forEach((attorney) => {
+    attorneyHtmlString += `<div class="team-profile-item swiper-slide">\n<a href="${attorney.fullUrl}" class="image-wrapper test">\n<div style="background-image: url(${attorney.customContent.listImage.assetUrl})" class="profile-image" alt="Image of attorney ${attorney.title}"></div>\n</a>\n</div>`;
+  });
+  attorneyHtmlString += `  </div>\n<div class="p-nav-button-next back-button swiper-button-next"></div>\n<div class="p-nav-button-prev forward-button swiper-button-prev"></div>\n<div class="p-pagination pagination"></div>`;
+  const setMenu = (newNumber, space) => {
+    $(".profile-wrapper").html(attorneyHtmlString);
+    const sliders = document.querySelectorAll(".swiper");
     for (let i = 0; i < sliders.length; i++) {
       sliders[i].classList.add(`swiper-container-${i}`);
       options = {
@@ -76,9 +42,9 @@ const setMenu = (newNumber, space) => {
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
-        }
+        },
       };
-  
+
       if (sliders[i].classList.contains("testim-swiper")) {
         options.loop = false;
         options.slidesPerView = 1;
@@ -92,7 +58,7 @@ const setMenu = (newNumber, space) => {
     }
     stop = true;
   };
-  
+
   const checkWidth = () => {
     if (stop) {
       return;
@@ -137,3 +103,5 @@ const setMenu = (newNumber, space) => {
   $(window).on("resize", () => {
     requestAnimationFrame(() => startAnimating(5));
   });
+  
+})();

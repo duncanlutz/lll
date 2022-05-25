@@ -143,31 +143,6 @@
             Meet Our Team
         </h1>
         <div class="profile-wrapper swiper">
-            <div class="profile-section swiper-wrapper">
-                <div class="team-profile-item swiper-slide">
-                    <a href="attorneys?john-lowrance" class="image-wrapper">
-                        <img src="../assets/John_Headshot.png" class="profile-image john_l" alt="Image of John Lowrance">
-                    </a>
-                </div>
-                <div class="team-profile-item swiper-slide">
-                    <a href="attorneys?rick-lundell" class="image-wrapper">
-                        <img src="../assets/Rick_Headshot.png" class="profile-image rick_l" alt="Image of Rick Lundell">
-                    </a>
-                </div>
-                <div class="team-profile-item swiper-slide">
-                    <a href="attorneys?brian-lofgren" class="image-wrapper">
-                        <img src="../assets/Brian_Headshot.png" class="profile-image brian_l"
-                            alt="Image of Brian Lofgren">
-                    </a>
-                </div>
-                <div class="team-profile-item pi-inactive swiper-slide">
-                    <a href="attorneys?duncan-lutz" class="image-wrapper">
-                        <img src="../assets/Duncan_Headshot.png" class="profile-image" alt="Image of Duncan Lutz">
-                    </a>
-                </div>
-            </div>
-            <div class="p-nav-button-next back-button swiper-button-next"></div>
-            <div class="p-nav-button-prev forward-button swiper-button-prev"></div>
         </div>
     </section>
     <section class="testimonials-box" id="testimonials">
@@ -277,37 +252,6 @@
             <div class="error-box"></div>
         </form>
     </section>
-    <footer>
-        <div class="footer-wrapper">
-            <div class="footer-left">
-                <a href="https://www.facebook.com/lowlunlof" target="_blank">
-                    <ion-icon name="logo-facebook" class="social-logo"></ion-icon>
-                </a>
-                <a href="https://www.linkedin.com/company/lowrance-lundell-lofgren" target="_blank">
-                    <ion-icon name="logo-linkedin" class="social-logo"></ion-icon>
-                </a>
-                <a href="https://twitter.com/LowLunLof" target="_blank">
-                    <ion-icon name="logo-twitter" class="social-logo"></ion-icon>
-                </a>
-            </div>
-            <div class="footer-right">
-                <div class="footer-text">
-                    <span class="foot-line-1">
-                        Phone: (801) 446-6464
-                    </span>
-                    <span class="foot-line-2">
-                        Fax: 801-254-0303
-                    </span>
-                    <span class="foot-line-3">
-                        1099 W South Jordan Pkwy, South Jordan, Utah 84095
-                    </span>
-                    <span class="foot-line-4">
-                        ©2022 by Lowrance Lundell Lofgren
-                    </span>
-                </div>
-            </div>
-        </div>
-    </footer>
     </div>
     </body>
     </html>

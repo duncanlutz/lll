@@ -19,7 +19,11 @@
       <div class="blog-image" style="background-image: url({assetUrl})"></div>
       <div class="blog-lower">
         <div class="blog-title">{title}</div>
+        {.video?}
+        <div class="blog-sum">[video]</div>
+        {.end}
         <div class="blog-sum" id="sum-{id}">
+        
         {body|safe|truncate 110}</div>
         <div class="blog-info">
           <div class="blog-line"></div>

@@ -5,7 +5,11 @@
   <div id="post-{id}" class="{@|item-classes} attorney-wrapper" data-item-id="{id}">
   <div class="attorney-center">
   <!-- Attorney Photo / Featured Image -->
+  {.section customContent.profileImage.assetUrl}
     <img src="{customContent.profileImage.assetUrl}" class="attorney-picture"/>
+    {.or}
+    <img src="{customContent.listImage.assetUrl}" class="attorney-picture"/>
+    {.end}
     <div class="attorney-copy">
     <!-- Attorney name / Title of blog post -->
         <div class="attorney-name">{title}</div>
