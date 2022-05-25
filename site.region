@@ -72,7 +72,6 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <squarespace:script src="swiper.js" />
     <squarespace:script src="jquery.js" />
-    <squarespace:script src="image-preload.js" />
     <squarespace:script src="load-attorneys.js" />
     <squarespace:script src="breadcrumbs.js" />
     <squarespace:script src="email.js" />

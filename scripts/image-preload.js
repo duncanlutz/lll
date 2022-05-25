@@ -12,11 +12,9 @@
     })
     .catch((error) => console.log("error", error));
 
-    console.log(attorneys);
-
   attorneys.forEach((attorney) => {
-    picArr.push(attorney.customContent.listImage.assetUrl);
-    picArr.push(attorney.customContent.profileImage.assetUrl);
+    if (attorney.customContent.listImage) picArr.push(attorney.customContent.listImage.assetUrl);
+    if (attorney.customContent.profileImage) picArr.push(attorney.customContent.profileImage.assetUrl);
   });
 
   const preloadImages = (array) => {
@@ -29,8 +27,6 @@
       img.onload = function () {
         var index = list.indexOf(this);
         if (index !== -1) {
-          // remove image from the array once it's loaded
-          // for memory consumption reasons
           list.splice(index, 1);
         }
       };
@@ -39,5 +35,5 @@
     }
   };
 
-  preloadImages(picArr);
+  preloadImages([...picArr, '../assets/bradyn-shock-3yno9AWLIu4-unsplash.webp', '../assets/bradyn-shock-9vvotQTYxFE-unsplash.webp', '../assets/bradyn-shock-NGzIGVj45qA-unsplash.webp', '../assets/criminal_defense_picture.webp', '../assets/immigration_picture.webp', '../assets/personal_injury_picture.webp', '../assets/wrongful_death_picture.webp']);
 })();

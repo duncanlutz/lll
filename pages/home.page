@@ -79,7 +79,7 @@
                     injuries, etc.
                 </p>
             </div>
-            <img class="practices-content-image personal-injury-image image" src="../assets/personal_injury_picture.png"
+            <img class="practices-content-image personal-injury-image image" src="../assets/personal_injury_picture.webp"
                 alt="A doctor and patient discuss the results of an X-Ray" />
         </div>
         <div class="practices-content-item wrongful-death-content">
@@ -88,15 +88,10 @@
                     Wrongful Death
                 </h3>
                 <p class="practices-content-paragraph wrongful-death-paragraph">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut recusandae dolor reiciendis
-                    fugiat
-                    adipisci animi reprehenderit perferendis eveniet vitae inventore dolores earum deserunt
-                    voluptates
-                    commodi, amet nisi incidunt exercitationem. Ut, quia tenetur iusto beatae incidunt pariatur
-                    accusantium, et, blanditiis necessitatibus accusamus id!
+                    We can assist you during this difficult time to help you obtain the compensation you deserve. Calculating a fair settlement in a wrongful death case is a complex process that requires a careful review of numerous factors. We will fight for you to hold the responsible party accountable.
                 </p>
             </div>
-            <img class="practices-content-image wrongful-death-image image" src="../assets/wrongful_death_picture.jpg"
+            <img class="practices-content-image wrongful-death-image image" src="../assets/wrongful_death_picture.webp"
                 alt="Lit candles at a memorial" />
         </div>
         <div class="practices-content-item immigration-content content-item-left">
@@ -113,7 +108,7 @@
                     and reconsider, immigration consequences of criminal activity, and more.
                 </p>
             </div>
-            <img class="practices-content-image immigration-image image" src="../assets/immigration_picture.png"
+            <img class="practices-content-image immigration-image image" src="../assets/immigration_picture.webp"
                 alt="Lawyer and clients go over and sign paperwork" />
         </div>
         <div class="practices-content-item criminal-defense-content">
@@ -133,7 +128,7 @@
                 </p>
             </div>
             <img class="practices-content-image criminal-defense-image image"
-                src="../assets/criminal_defense_picture.png"
+                src="../assets/criminal_defense_picture.webp"
                 alt="A gavel sits next to a scale, representing the justice system" />
         </div>
         <div class="pract-photos-bg photo-bg"></div>
@@ -253,5 +248,6 @@
         </form>
     </section>
     </div>
+    <squarespace:script src="image-preload.js" />
     </body>
     </html>

@@ -14,10 +14,6 @@ body {
   padding-bottom: 5%;
   overflow: hidden;
 
-  // @media (max-width: 1450px) {
-  //   margin-top: 4%;
-  // }
-
   @media (min-width: 1000px) {
     padding-top: 10%;
   }
@@ -123,6 +119,11 @@ body {
       border-radius: 1vw;
       text-decoration: none;
       color: @breadcrumb-blue;
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.03);
+      }
 
       .blog-image {
         width: 100%;
