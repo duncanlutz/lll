@@ -117,6 +117,8 @@ const openMobNav = () => {
 
 const closeMobNav = (t) => {
   if (t == null) {
+    $(".side-menu").addClass("mob-nav-hidden");
+    $("body").css("overflow", "unset");
     return;
   }
 
@@ -239,8 +241,6 @@ const selectOption = (e) => {
 
   openSelectMenu(true);
 };
-
-emailjs.init("user_GtSL5lIk3N7YBMUKI28ro");
 
 const checkForm = (e) => {
   e.preventDefault();
@@ -368,17 +368,6 @@ const checkForm = (e) => {
       '<div class="message-error">An error occured while submitting your message. Please try again or call us at <a href="tel:8014466464">(801) 446-6464</a>'
     );
   };
-
-  const form = document.querySelector("form");
-
-  emailjs.sendForm("service_qybifle", "template_sowsjzl", form).then(
-    () => {
-      $(".sub-button").submit();
-    },
-    (error) => {
-      messageFail();
-    }
-  );
 };
 
 const getScrollBarWidth = () => {
