@@ -214,7 +214,6 @@
                     <input type="textarea" name="Message" id="input-message">
                 </div>
             </div>
-            <input type="hidden" name="_captcha" value="false">
             <button type="submit" class="sub-button" onclick="checkForm(event)">Send</button>
             <div class="error-box"></div>
         </form>
