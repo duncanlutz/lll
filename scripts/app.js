@@ -1,3 +1,40 @@
+const queryParams = window.location.search.slice(1).split("&");
+
+if (queryParams != null) {
+  queryParams.forEach((param) => {
+    const p = param.split("=");
+    const key = p[0];
+    const val = p[1];
+
+    if (key === "success" && val === "true") {
+      const dForm = document.querySelector("form");
+      const height = dForm.offsetHeight;
+      $("form").addClass("hidden");
+      setTimeout(() => {
+        const contUs = $(".contact-us");
+        contUs.css("height", height);
+        $("form").remove();
+        contUs.append(
+          `<div class="message-success hidden"><span class="m-line-1">Your message has been recieved.</span><span class="m-line-2">We'll review the details you provided and get back to you as soon as possible.</span><span class="m-line-3">If your message is urgent, please call us at <a href="tel:8014466464">(801) 446-6464</a></span></div>`
+        );
+        contUs
+          .css("display", "flex")
+          .css("align-items", "flex-start")
+          .css("flex-direction", "column")
+          .css("gap", "10%");
+
+        setTimeout(() => {
+          $(".message-success").removeClass("hidden");
+          document.querySelector(".message-success").scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }, 100);
+      }, 300);
+    }
+  });
+}
+
 $(".accessibility-menu-button").on("click", () => {
   if ($(".accessibility-menu").hasClass("menu-hidden")) {
     $(".accessibility-menu").removeClass("menu-hidden");
@@ -326,29 +363,6 @@ const checkForm = (e) => {
     return;
   }
 
-  const messageSuccess = () => {
-    const dForm = document.querySelector("form");
-    const height = dForm.offsetHeight;
-    $("form").addClass("hidden");
-    setTimeout(() => {
-      const contUs = $(".contact-us");
-      contUs.css("height", height);
-      $("form").remove();
-      contUs.append(
-        `<div class="message-success hidden"><span class="m-line-1">Your message has been recieved.</span><span class="m-line-2">We'll review the details you provided and get back to you as soon as possible.</span><span class="m-line-3">If your message is urgent, please call us at <a href="tel:8014466464">(801) 446-6464</a></span></div>`
-      );
-      contUs
-        .css("display", "flex")
-        .css("align-items", "flex-start")
-        .css("flex-direction", "column")
-        .css('gap', '10%');
-
-      setTimeout(() => {
-        $(".message-success").removeClass("hidden");
-      }, 100);
-    }, 300);
-  };
-
   const messageFail = () => {
     $(".error-box").append(
       '<div class="message-error">An error occured while submitting your message. Please try again or call us at <a href="tel:8014466464">(801) 446-6464</a>'
@@ -357,9 +371,9 @@ const checkForm = (e) => {
 
   const form = document.querySelector("form");
 
-  emailjs.sendForm("service_qybifle", "template_gx23nbj", form).then(
+  emailjs.sendForm("service_qybifle", "template_sowsjzl", form).then(
     () => {
-      messageSuccess();
+      $(".sub-button").submit();
     },
     (error) => {
       messageFail();

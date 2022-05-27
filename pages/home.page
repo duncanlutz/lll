@@ -173,7 +173,7 @@
         <h1 class="contact-title">
             Contact Us
         </h1>
-        <form>
+        <form action="https://formsubmit.co/4e91b27ad345e670bb384cebd7b468a0" method="POST">
         <div class="f-sec-one">
             <div class="f-line f-one">
                 <div class="input-name-div input-div">
@@ -182,7 +182,7 @@
                 </div>
                 <div class="input-email-div input-div">
                     <label for="input-email">Email</label>
-                    <input type="text" name="Email" id="input-email">
+                    <input type="text" name="email" id="input-email">
                 </div>
             </div>
             <div class="f-line f-two">
@@ -193,10 +193,10 @@
                 <div class="input-case-div input-div">
                     <label for="input-case-type">Case Type</label>
                     <select name="Case_Type" id="input-case-type" onclick="openSelectMenu()">
-                        <option value="personal-injury" id="personal-injury">Personal Injury</option>
-                        <option value="wrongful-death" id="wrongful-death">Wrongful Death</option>
-                        <option value="immigration" id="immigration">Immigration</option>
-                        <option value="criminal-defense" id="criminal-defense">Criminal Defense</option>
+                        <option value="Personal Injury" id="personal-injury">Personal Injury</option>
+                        <option value="Wrongful Death" id="wrongful-death">Wrongful Death</option>
+                        <option value="Immigration" id="immigration">Immigration</option>
+                        <option value="Criminal Defense" id="criminal-defense">Criminal Defense</option>
                     </select>
                     <div class="options-wrapper">
                         <div class="select-option pi top-option" onclick="selectOption(event)">Personal Injury</div>
@@ -214,7 +214,10 @@
                     <input type="textarea" name="Message" id="input-message">
                 </div>
             </div>
-            <button type="submit" class="sub-button" onclick="checkForm(event)">Send</button>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://localhost:9000/?success=true">
+            <input type="text" name="_honey" style="display:none">
+            <button type="submit" class="sub-button" onclick="checkForm();">Send</button>
             <div class="error-box"></div>
         </form>
     </section>

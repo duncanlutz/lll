@@ -24,7 +24,7 @@
                         style="enable-background:new 0 0 673 234;" xml:space="preserve" class="logo-image">
                         <style type="text/css">
                             .st1 {
-                                font-family: 'Metropolis-Regular';
+                                font-family: 'Metropolis';
                             }
 
                             .st2 {
@@ -65,7 +65,7 @@
       <a class="nav-button testimonials" href="/#testimonials">Testimonials</a>
     </div>
     <div class="nav-button contact">
-      <a class="nav-button contact" href="/#contact">Contact</a>
+      <a class="nav-button contact ca" href="/#contact">Contact</a>
     </div>
 
     {.repeated section items}
