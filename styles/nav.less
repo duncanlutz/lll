@@ -93,7 +93,7 @@
   fill: @color0;
   width: 50%;
   width: clamp(2rem, 30vw, 10rem);
-  transition: transform .3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 
   &:hover {
     transform: scale(1.05);
@@ -101,7 +101,7 @@
 }
 
 .nav-button {
-  transition: transform .3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   &:hover {
     transform: scale(1.05);
   }
@@ -112,7 +112,7 @@
   border: 0;
   color: @color0;
   cursor: pointer;
-  font-family: 'Metropolis';
+  font-family: "Metropolis";
   font-size: 1.2rem;
   font-weight: 300;
   text-decoration: none;
@@ -259,4 +259,8 @@ nav.mobile-nav {
     width: clamp(2rem, 30vw, 10rem);
     aspect-ratio: unset;
   }
+}
+
+.st1 {
+  font-family: "Metropolis";
 }
