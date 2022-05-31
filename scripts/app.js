@@ -360,8 +360,7 @@ const checkForm = (e) => {
 
   if (captchaVisible) {
     $.ajax({
-      // 4e91b27ad345e670bb384cebd7b468a0
-      url: "https://formsubmit.co/ajax/duncanwlutz@gmail.com",
+      url: "https://formsubmit.co/ajax/4e91b27ad345e670bb384cebd7b468a0",
       method: "POST",
       data: {
         Name: name,
