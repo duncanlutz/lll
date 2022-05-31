@@ -1,5 +1,6 @@
 const queryParams = window.location.search.slice(1).split("&");
 let captcha = false;
+let captchaVisible = false;
 
 $(".accessibility-menu-button").on("click", () => {
   if ($(".accessibility-menu").hasClass("menu-hidden")) {
@@ -256,8 +257,10 @@ const checkForm = (e) => {
   };
 
   try {
-    if (captcha === false) {
-      addToMessage("* Please complete the reCAPTCHA.");
+    if (captchaVisible) {
+      if (captcha === false) {
+        addToMessage("* Please complete the reCAPTCHA.");
+      }
     }
 
     if (name.length === 0) {
@@ -354,54 +357,66 @@ const checkForm = (e) => {
     $(".error-box").html(errorMessage);
     return;
   }
-  $.ajax({
-    url: "https://formsubmit.co/ajax/4e91b27ad345e670bb384cebd7b468a0",
-    method: "POST",
-    data: {
-      Name: name,
-      Email: email,
-      "Phone Number": phone,
-      "Case Type": caseType,
-      Message: textArea,
-      _honey: honeyPot,
-      _template: "box",
-      _subject: `New message from ${name}`,
-    },
-    dataType: "json",
-  })
-    .then((res) => {
-      if (res.success === "true") {
-        const dForm = document.querySelector("form");
-        const height = dForm.offsetHeight;
-        $("form").addClass("hidden");
-        setTimeout(() => {
-          const contUs = $(".contact-us");
-          contUs.css("height", height);
-          $("form").remove();
-          contUs.append(
-            `<div class="message-success hidden"><span class="m-line-1">Your message has been recieved.</span><span class="m-line-2">We'll review the details you provided and get back to you as soon as possible.</span><span class="m-line-3">If your message is urgent, please call us at <a href="tel:8014466464">(801) 446-6464</a></span></div>`
-          );
-          contUs
-            .css("display", "flex")
-            .css("align-items", "flex-start")
-            .css("flex-direction", "column")
-            .css("gap", "10%");
-          setTimeout(() => {
-            $(".message-success").removeClass("hidden");
-          }, 100);
-        }, 300);
-        return;
-      } else {
-        messageFail();
-      }
-    })
-    .catch((err) => console.log(err));
 
-  const messageFail = () => {
-    $(".error-box").append(
-      '<div class="message-error">An error occured while submitting your message. Please try again or call us at <a href="tel:8014466464">(801) 446-6464</a>'
-    );
-  };
+  if (captchaVisible) {
+    $.ajax({
+      // 4e91b27ad345e670bb384cebd7b468a0
+      url: "https://formsubmit.co/ajax/duncanwlutz@gmail.com",
+      method: "POST",
+      data: {
+        Name: name,
+        Email: email,
+        "Phone Number": phone,
+        "Case Type": caseType,
+        Message: textArea,
+        _honey: honeyPot,
+        _template: "box",
+        _subject: `New message from ${name}`,
+      },
+      dataType: "json",
+    })
+      .then((res) => {
+        if (res.success === "true") {
+          const dForm = document.querySelector("form");
+          const height = dForm.offsetHeight;
+          $("form").addClass("hidden");
+          setTimeout(() => {
+            const contUs = $(".contact-us");
+            contUs.css("height", height);
+            $("form").remove();
+            contUs.append(
+              `<div class="message-success hidden"><span class="m-line-1">Your message has been recieved.</span><span class="m-line-2">We'll review the details you provided and get back to you as soon as possible.</span><span class="m-line-3">If your message is urgent, please call us at <a href="tel:8014466464">(801) 446-6464</a></span></div>`
+            );
+            contUs
+              .css("display", "flex")
+              .css("align-items", "flex-start")
+              .css("flex-direction", "column")
+              .css("gap", "10%");
+            setTimeout(() => {
+              $(".message-success").removeClass("hidden");
+            }, 100);
+          }, 300);
+          return;
+        } else {
+          messageFail();
+        }
+      })
+      .catch((err) => console.log(err));
+
+    const messageFail = () => {
+      $(".error-box").append(
+        '<div class="message-error">An error occured while submitting your message. Please try again or call us at <a href="tel:8014466464">(801) 446-6464</a>'
+      );
+    };
+    return;
+  }
+
+  grecaptcha.render("recaptcha", {
+    sitekey: "6LcaCjMgAAAAAJKnOcBSBmNjfN8uJ_CBinmElBoI",
+    callback: captchaCallback,
+  });
+  captchaVisible = true;
+  return;
 };
 
 const getScrollBarWidth = () => {
