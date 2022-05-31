@@ -1,41 +1,6 @@
 const queryParams = window.location.search.slice(1).split("&");
 let captcha = false;
 
-if (queryParams != null) {
-  queryParams.forEach((param) => {
-    const p = param.split("=");
-    const key = p[0];
-    const val = p[1];
-
-    if (key === "success" && val === "true") {
-      const dForm = document.querySelector("form");
-      const height = dForm.offsetHeight;
-      $("form").addClass("hidden");
-      setTimeout(() => {
-        const contUs = $(".contact-us");
-        contUs.css("height", height);
-        $("form").remove();
-        contUs.append(
-          `<div class="message-success hidden"><span class="m-line-1">Your message has been recieved.</span><span class="m-line-2">We'll review the details you provided and get back to you as soon as possible.</span><span class="m-line-3">If your message is urgent, please call us at <a href="tel:8014466464">(801) 446-6464</a></span></div>`
-        );
-        contUs
-          .css("display", "flex")
-          .css("align-items", "flex-start")
-          .css("flex-direction", "column")
-          .css("gap", "10%");
-
-        setTimeout(() => {
-          $(".message-success").removeClass("hidden");
-          document.querySelector(".message-success").scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }, 100);
-      }, 300);
-    }
-  });
-}
-
 $(".accessibility-menu-button").on("click", () => {
   if ($(".accessibility-menu").hasClass("menu-hidden")) {
     $(".accessibility-menu").removeClass("menu-hidden");
@@ -244,17 +209,24 @@ const selectOption = (e) => {
 };
 
 const captchaCallback = (token) => {
-  fetch(
-    `https://www.google.com/recaptcha/api/siteverify?secret=6LcaCjMgAAAAABaWPCKyYx-MZapvOwFq9L2Do8Dy&response=${token}`,
-    {
-      method: "POST",
-      redirect: "follow",
-    }
-  )
-    .then((response) => response.text())
-    .then((result) => console.log(result))
-    .catch((error) => console.log("error", error));
-  // captcha = true;
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+
+  var raw = JSON.stringify({
+    token: token,
+  });
+
+  fetch("https://mystical-glass-351915.wm.r.appspot.com/captcha", {
+    method: "POST",
+    headers: myHeaders,
+    body: raw,
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      if (data.success) {
+        captcha = true;
+      }
+    });
 };
 
 const checkForm = (e) => {
@@ -265,6 +237,7 @@ const checkForm = (e) => {
   const name = $("#input-name").val();
   const email = $("#input-email").val();
   const phone = $("#input-phone").val();
+  const caseType = $("#input-case-type").val();
   const textArea = $("#input-textarea").val();
   const message = $("#input-message");
 
@@ -381,6 +354,42 @@ const checkForm = (e) => {
     $(".error-box").html(errorMessage);
     return;
   }
+  $.ajax({
+    url: "https://formsubmit.co/ajax/4e91b27ad345e670bb384cebd7b468a0",
+    method: "POST",
+    data: {
+      Name: name,
+      "Email Address": email,
+      "Phone Number": phone,
+      "Case Type": caseType,
+      Message: textArea,
+    },
+    dataType: "json",
+  })
+    .then((res) => {
+      if (res.success) {
+        const dForm = document.querySelector("form");
+        const height = dForm.offsetHeight;
+        $("form").addClass("hidden");
+        setTimeout(() => {
+          const contUs = $(".contact-us");
+          contUs.css("height", height);
+          $("form").remove();
+          contUs.append(
+            `<div class="message-success hidden"><span class="m-line-1">Your message has been recieved.</span><span class="m-line-2">We'll review the details you provided and get back to you as soon as possible.</span><span class="m-line-3">If your message is urgent, please call us at <a href="tel:8014466464">(801) 446-6464</a></span></div>`
+          );
+          contUs
+            .css("display", "flex")
+            .css("align-items", "flex-start")
+            .css("flex-direction", "column")
+            .css("gap", "10%");
+        }, 300);
+        return;
+      } else {
+        messageFail();
+      }
+    })
+    .catch((err) => console.log(err));
 
   const messageFail = () => {
     $(".error-box").append(

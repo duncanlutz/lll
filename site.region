@@ -7,6 +7,14 @@
     <!-- include system scripts, page meta, and header code injection -->
     {squarespace-headers}
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XWZMHCQ0F8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-XWZMHCQ0F8');
+    </script>
   </head>
   
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
