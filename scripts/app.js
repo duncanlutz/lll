@@ -215,7 +215,6 @@ const captchaCallback = (token) => {
   var raw = JSON.stringify({
     token: token,
   });
-
   fetch("https://mystical-glass-351915.wm.r.appspot.com/captcha", {
     method: "POST",
     headers: myHeaders,
@@ -240,6 +239,7 @@ const checkForm = (e) => {
   const caseType = $("#input-case-type").val();
   const textArea = $("#input-textarea").val();
   const message = $("#input-message");
+  const honeyPot = $("#input-honeypot").val();
 
   message.val(textArea);
 
@@ -359,15 +359,18 @@ const checkForm = (e) => {
     method: "POST",
     data: {
       Name: name,
-      "Email Address": email,
+      Email: email,
       "Phone Number": phone,
       "Case Type": caseType,
       Message: textArea,
+      _honey: honeyPot,
+      _template: "box",
+      _subject: `New message from ${name}`,
     },
     dataType: "json",
   })
     .then((res) => {
-      if (res.success) {
+      if (res.success === "true") {
         const dForm = document.querySelector("form");
         const height = dForm.offsetHeight;
         $("form").addClass("hidden");
@@ -383,6 +386,9 @@ const checkForm = (e) => {
             .css("align-items", "flex-start")
             .css("flex-direction", "column")
             .css("gap", "10%");
+          setTimeout(() => {
+            $(".message-success").removeClass("hidden");
+          }, 100);
         }, 300);
         return;
       } else {

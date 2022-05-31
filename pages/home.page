@@ -220,10 +220,10 @@
                 <div class="input-message-div input-div">
                     <label for="input-message">Message</label>
                     <textarea id="input-textarea"></textarea>
-                    <input type="textarea" name="Message" id="input-message">
+                    <input type="textarea" name="Message" id="input-message" />
                 </div>
             </div>
-            <input type="text" name="_honey" style="display:none">
+            <input type="text" name="_honey" style="display:none" />
             <div class="g-recaptcha" id="recaptcha"></div>
             <button type="submit" class="sub-button" onclick="checkForm(event);">Send</button>
             <div class="error-box"></div>
