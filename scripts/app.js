@@ -1,4 +1,5 @@
 const queryParams = window.location.search.slice(1).split("&");
+let captcha = false;
 
 if (queryParams != null) {
   queryParams.forEach((param) => {
@@ -242,6 +243,20 @@ const selectOption = (e) => {
   openSelectMenu(true);
 };
 
+const captchaCallback = (token) => {
+  fetch(
+    `https://www.google.com/recaptcha/api/siteverify?secret=6LcaCjMgAAAAABaWPCKyYx-MZapvOwFq9L2Do8Dy&response=${token}`,
+    {
+      method: "POST",
+      redirect: "follow",
+    }
+  )
+    .then((response) => response.text())
+    .then((result) => console.log(result))
+    .catch((error) => console.log("error", error));
+  // captcha = true;
+};
+
 const checkForm = (e) => {
   e.preventDefault();
 
@@ -268,6 +283,10 @@ const checkForm = (e) => {
   };
 
   try {
+    if (captcha === false) {
+      addToMessage("* Please complete the reCAPTCHA.");
+    }
+
     if (name.length === 0) {
       addToMessage("* Please enter your name.");
       nameError = true;

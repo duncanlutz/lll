@@ -1,5 +1,14 @@
 <html>
 <head>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+    <script type="text/javascript">
+        var onloadCallback = function() {
+        grecaptcha.render('recaptcha', {
+          sitekey : '6LcaCjMgAAAAAJKnOcBSBmNjfN8uJ_CBinmElBoI',
+          callback: captchaCallback
+        });
+      };
+    </script>
 </head>
 <body>
     <section class="landing" id="home">
@@ -219,6 +228,7 @@
             <input type="text" name="_honey" style="display:none">
             <button type="submit" class="sub-button" onclick="checkForm();">Send</button>
             <div class="error-box"></div>
+            <div class="g-recaptcha" id="recaptcha"></div>
         </form>
     </section>
     </div>
