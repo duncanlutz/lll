@@ -263,10 +263,8 @@ const checkForm = (e) => {
   };
 
   try {
-    if (captchaVisible) {
-      if (captcha === false) {
-        addToMessage("* Please complete the reCAPTCHA.");
-      }
+    if (captcha === false) {
+      addToMessage("* Please complete the reCAPTCHA.");
     }
 
     if (name.length === 0) {
@@ -365,64 +363,56 @@ const checkForm = (e) => {
     return;
   }
 
-  if (captchaVisible) {
-    $.ajax({
-      url: "https://formsubmit.co/ajax/4e91b27ad345e670bb384cebd7b468a0",
-      method: "POST",
-      data: {
-        Name: name,
-        Email: email,
-        "Phone Number": phone,
-        "Case Type": caseType,
-        Message: textArea,
-        _honey: honeyPot,
-        _template: "box",
-        _subject: `New message from ${name}`,
-      },
-      dataType: "json",
-    })
-      .then((res) => {
-        if (res.success === "true") {
-          const dForm = document.querySelector("form");
-          const height = dForm.offsetHeight;
-          $("form").addClass("hidden");
+  $.ajax({
+    url: "https://formsubmit.co/ajax/4e91b27ad345e670bb384cebd7b468a0",
+    method: "POST",
+    data: {
+      Name: name,
+      Email: email,
+      "Phone Number": phone,
+      "Case Type": caseType,
+      Message: textArea,
+      _honey: honeyPot,
+      _template: "box",
+      _subject: `New message from ${name}`,
+    },
+    dataType: "json",
+  })
+    .then((res) => {
+      if (res.success === "true") {
+        const dForm = document.querySelector("form");
+        const height = dForm.offsetHeight;
+        $("form").addClass("hidden");
+        setTimeout(() => {
+          const contUs = $(".contact-us");
+          contUs.css("height", height);
+          $("form").remove();
+          contUs.append(
+            `<div class="message-success hidden"><span class="m-line-1">Your message has been recieved.</span><span class="m-line-2">We'll review the details you provided and get back to you as soon as possible.</span><span class="m-line-3">If your message is urgent, please call us at <a href="tel:8014466464">(801) 446-6464</a></span></div>`
+          );
+          contUs
+            .css("display", "flex")
+            .css("align-items", "flex-start")
+            .css("flex-direction", "column")
+            .css("gap", "10%");
           setTimeout(() => {
-            const contUs = $(".contact-us");
-            contUs.css("height", height);
-            $("form").remove();
-            contUs.append(
-              `<div class="message-success hidden"><span class="m-line-1">Your message has been recieved.</span><span class="m-line-2">We'll review the details you provided and get back to you as soon as possible.</span><span class="m-line-3">If your message is urgent, please call us at <a href="tel:8014466464">(801) 446-6464</a></span></div>`
-            );
-            contUs
-              .css("display", "flex")
-              .css("align-items", "flex-start")
-              .css("flex-direction", "column")
-              .css("gap", "10%");
-            setTimeout(() => {
-              $(".message-success").removeClass("hidden");
-            }, 100);
-          }, 300);
-          return;
-        } else {
-          messageFail();
-        }
-      })
-      .catch((err) => console.log(err));
+            $(".message-success").removeClass("hidden");
+          }, 100);
+        }, 300);
+        return;
+      } else {
+        messageFail();
+      }
+    })
+    .catch((err) => console.log(err));
 
-    const messageFail = () => {
-      formHasSubmitted = false;
-      $(".error-box").append(
-        '<div class="message-error">An error occured while submitting your message. Please try again or call us at <a href="tel:8014466464">(801) 446-6464</a>'
-      );
-    };
-    return;
-  }
+  const messageFail = () => {
+    formHasSubmitted = false;
+    $(".error-box").append(
+      '<div class="message-error">An error occured while submitting your message. Please try again or call us at <a href="tel:8014466464">(801) 446-6464</a>'
+    );
+  };
 
-  grecaptcha.render("recaptcha", {
-    sitekey: "6LcaCjMgAAAAAJKnOcBSBmNjfN8uJ_CBinmElBoI",
-    callback: captchaCallback,
-  });
-  captchaVisible = true;
   return;
 };
 
