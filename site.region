@@ -1,8 +1,30 @@
 <!doctype html>
 <html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
+    <title>Lowrance Lundell Lofgren | Utah Personal Injury & Immigration Lawyers</title>
+    <meta name="title" content="Lowrance Lundell Lofgren | Utah Personal Injury & Immigration Lawyers">
+    <meta name="description"
+        content="Lowrance Lundell Lofgren is dedicated to your success. We are contingency fee lawyers specializing in personal injury, immigration, and criminal defense located in South Jordan Utah.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://3law.com/">
+    <meta property="og:title" content="Lowrance Lundell Lofgren | Utah Personal Injury & Immigration Lawyers">
+    <meta property="og:description"
+        content="Lowrance Lundell Lofgren is dedicated to your success. We are contingency fee lawyers specializing in personal injury, immigration, and criminal defense located in South Jordan Utah.">
+    <meta property="og:image" content="./images/LLL_Meta_Photo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://3law.com/">
+    <meta property="twitter:title" content="Lowrance Lundell Lofgren | Utah Personal Injury & Immigration Lawyers">
+    <meta property="twitter:description"
+        content="Lowrance Lundell Lofgren is dedicated to your success. We are contingency fee lawyers specializing in personal injury, immigration, and criminal defense located in South Jordan Utah.">
+    <meta property="twitter:image" content="./images/LLL_Meta_Photo.png">
 
     <!-- include system scripts, page meta, and header code injection -->
     {squarespace-headers}

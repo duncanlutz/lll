@@ -1,6 +1,7 @@
 const queryParams = window.location.search.slice(1).split("&");
 let captcha = false;
 let captchaVisible = false;
+let formHasSubmitted = false;
 
 $(".accessibility-menu-button").on("click", () => {
   if ($(".accessibility-menu").hasClass("menu-hidden")) {
@@ -232,6 +233,11 @@ const captchaCallback = (token) => {
 const checkForm = (e) => {
   e.preventDefault();
 
+  if (formHasSubmitted) {
+    return;
+  }
+
+  formHasSubmitted = true;
   let nameError = false;
   let phoneError = false;
   const name = $("#input-name").val();
@@ -354,6 +360,7 @@ const checkForm = (e) => {
   }
 
   if (errorMessage !== "") {
+    formHasSubmitted = false;
     $(".error-box").html(errorMessage);
     return;
   }
@@ -403,6 +410,7 @@ const checkForm = (e) => {
       .catch((err) => console.log(err));
 
     const messageFail = () => {
+      formHasSubmitted = false;
       $(".error-box").append(
         '<div class="message-error">An error occured while submitting your message. Please try again or call us at <a href="tel:8014466464">(801) 446-6464</a>'
       );

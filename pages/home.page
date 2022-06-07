@@ -23,7 +23,7 @@
     </section>
     <section class="description-box" id="about-us">
         <h1 class="description-title">
-            Professional, Educated, & Commited
+            Professional, Educated, & Committed
         </h1>
         <p class="description-paragraph">
             Lowrance Lundell Lofgren has successfully represented thousands of clients in Personal Injury, Immigration,
@@ -199,12 +199,6 @@
                         <option value="Immigration" id="immigration">Immigration</option>
                         <option value="Criminal Defense" id="criminal-defense">Criminal Defense</option>
                     </select>
-                    <div class="options-wrapper">
-                        <div class="select-option pi top-option" onclick="selectOption(event)">Personal Injury</div>
-                        <div class="select-option wd" onclick="selectOption(event)">Wrongful Death</div>
-                        <div class="select-option im" onclick="selectOption(event)">Immigration</div>
-                        <div class="select-option cd bottom-option" onclick="selectOption(event)">Criminal Defense</div>
-                    </div>
                 </div>
             </div>
             </div>

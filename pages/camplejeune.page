@@ -1,2 +1,152 @@
-<div>
-</div>
+<html>
+    <body>
+        <div class="mass__torte">
+            <div class="mass__torte__landing">
+                <div class="mass__torte__description">
+                <div class="mass__torte__header">
+                    <h1>Camp Lejeuene Water Contamination</h1>
+                    <div class="mass__torte__header__underline"></div>
+                </div>
+                <div class="mass__torte__description__bottom">
+                    <p>Did you serve, live or work at Marine Corps Base Camp Lejeune, North Carolina between August 1953, and December 1987?<br><br>You may be entitled to compensation</p>
+                </div>
+                <div class="mass__torte__description__bottom__wrapper">
+                <h3>What Are the Camp Lejeune Water Contamination Claims?</h3>
+                <div class="mass__torte__description__body">
+                <div class="mass__torte__description__body__wrapper">
+                    <div>In 1982 the United States Marine Corps discovered Volatile Organic Compounds (VOC) in the drinking water sourced by 2 of 8 water treatment plants at Camp Lejeune.<br><br>Between 1953 and 1987, traces of PCE (perchloroethylene), TCE (trichloroethylene), Benzene and Vinyl Chloride were found in drinking water that has since been identified by the Federal Government as exceeding the current EPA maximum contamination levels by hundreds of times. The two water treatment plants are Hadnot Point and Tarawa Terrace.<br><br>The health conditions include:</div>
+                    <div class="mass__torte__description__body__wrapper__list">
+                        <div class="mass__torte__description__body__wrapper__list__left">
+                            <div>· Bladder cancer</div>
+                            <div>· Breast cancer</div>
+                            <div>· Esophageal cancer</div>
+                            <div>· Female infertility</div>
+                            <div>· Hepatic steatosis</div>
+                            <div>· Kidney cancer</div>
+                            <div>· Leukemia</div>
+                        </div>
+                        <div class="mass__torte__description__body__wrapper__list__right">
+                            <div>· Lung cancer</div>
+                            <div>· Miscarriage</div>
+                            <div>· Multiple myeloma</div>
+                            <div>· Myelodysplastic syndromes</div>
+                            <div>· Neurobehavioral effects</div>
+                            <div>· Non-Hodgkin’s lymphoma</div>
+                            <div>· Renal toxicity</div>
+                            <div>· Scleroderma</div>
+                        </div>
+                    </div>
+                    <div>Hadnot Point water treatment plant began operation in 1942 and supplied water to the Mainside Barracks, Hospital Point Family Housing, Family Housing at Midway Park, Paradise Point and Berkeley Manor. Hadnot Point had multiple sources of contamination streaming from leaks in underground storage tanks, industrial area spills and waste disposal sites. VOCs identified at Hadnot Point are PCE, Benzene and Vinyl Chloride.<br><br>Tarawa Terrace water treatment plant began operation in 1952 and supplied water to Tarawa Terrace family housing and Knox Trailer Park. The source of contamination was identified as an off-base dry cleaning company, ABC One-Hour Cleaners, through their waste disposal practices.<br><br>The most contaminated wells were shut down in February of 1985.</div>
+                    </div>
+                    <div class="mass__torte__body__form">
+                        <h3>Free Case Evaluation</h3>
+                            <form>
+                            <div class="mass__torte__body__form__line__1">
+                                <div class="mass__torte__body__form__line__1__column">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" id="name">
+                                </div>
+                                <div class="mass__torte__body__form__line__1__column">
+                                    <label for="name">Email</label>
+                                    <input type="text" name="email" id="email">
+                                </div>
+                            </div>
+                            <div class="mass__torte__body__form__line__2">
+                                <label for="name">Phone Number</label>
+                                <input type="text" name="phone" id="phone">
+                            </div>
+                                <div class="mass__torte__body__form__line__3">
+                                    <label for="served">Did you serve, live or work at Marine Corps Base Camp Lejeune, North Carolina between Aug 1953 and Dec 1987?</label>
+                                    <select name="served" id="served">
+                                        <option value="true">No</option>
+                                        <option value="false">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="mass__torte__body__form__line__4">
+                                <label for="injury">Injury</label>
+                                <select name="injury" id="injury">
+                                    <option value="Bladder Cancer">Bladder cancer</option>
+                                    <option value="Breast Cancer">Breast cancer</option>
+                                    <option value="Esophageal Cancer">Esophageal cancer</option>
+                                    <option value="Female Infertility">Female infertility</option>
+                                    <option value="Hepatic Steatosis">Hepatic steatosis</option>
+                                    <option value="Kidney Cancer">Kidney cancer</option>
+                                    <option value="Leukemi">Leukemia</option>
+                                    <option value="Lung Cancer">Lung cancer</option>
+                                    <option value="Miscarriage">Miscarriage</option>
+                                    <option value="Multiple Myeloma">Multiple myeloma</option>
+                                    <option value="Myelodysplastic Syndromes">Myelodysplastic syndromes</option>
+                                    <option value="Neurobehavioral Effects">Neurobehavioral effects</option>
+                                    <option value="Non-Hodgkin’s Lymphoma">Non-Hodgkin’s lymphoma</option>
+                                    <option value="Renal Toxicity">Renal toxicity</option>
+                                    <option value="Scleroderma">Scleroderma</option>
+                                </select>
+                                </div>
+                                <div class="mass__torte__body__form__line__5">
+                                    <label for="state">State</label>
+                                    <select name="state" id="state">
+                                        <option value="AL">Alabama</option>
+                                        <option value="AK">Alaska</option>
+                                        <option value="AZ">Arizona</option>
+                                        <option value="AR">Arkansas</option>
+                                        <option value="CA">California</option>
+                                        <option value="CO">Colorado</option>
+                                        <option value="CT">Connecticut</option>
+                                        <option value="DE">Delaware</option>
+                                        <option value="DC">District Of Columbia</option>
+                                        <option value="FL">Florida</option>
+                                        <option value="GA">Georgia</option>
+                                        <option value="HI">Hawaii</option>
+                                        <option value="ID">Idaho</option>
+                                        <option value="IL">Illinois</option>
+                                        <option value="IN">Indiana</option>
+                                        <option value="IA">Iowa</option>
+                                        <option value="KS">Kansas</option>
+                                        <option value="KY">Kentucky</option>
+                                        <option value="LA">Louisiana</option>
+                                        <option value="ME">Maine</option>
+                                        <option value="MD">Maryland</option>
+                                        <option value="MA">Massachusetts</option>
+                                        <option value="MI">Michigan</option>
+                                        <option value="MN">Minnesota</option>
+                                        <option value="MS">Mississippi</option>
+                                        <option value="MO">Missouri</option>
+                                        <option value="MT">Montana</option>
+                                        <option value="NE">Nebraska</option>
+                                        <option value="NV">Nevada</option>
+                                        <option value="NH">New Hampshire</option>
+                                        <option value="NJ">New Jersey</option>
+                                        <option value="NM">New Mexico</option>
+                                        <option value="NY">New York</option>
+                                        <option value="NC">North Carolina</option>
+                                        <option value="ND">North Dakota</option>
+                                        <option value="OH">Ohio</option>
+                                        <option value="OK">Oklahoma</option>
+                                        <option value="OR">Oregon</option>
+                                        <option value="PA">Pennsylvania</option>
+                                        <option value="RI">Rhode Island</option>
+                                        <option value="SC">South Carolina</option>
+                                        <option value="SD">South Dakota</option>
+                                        <option value="TN">Tennessee</option>
+                                        <option value="TX">Texas</option>
+                                        <option value="UT">Utah</option>
+                                        <option value="VT">Vermont</option>
+                                        <option value="VA">Virginia</option>
+                                        <option value="WA">Washington</option>
+                                        <option value="WV">West Virginia</option>
+                                        <option value="WI">Wisconsin</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                </div>
+                                <label for="details">Case Details</label>
+                                <textarea name="details" id="details"></textarea>
+                                <button class="mass__torte__submit">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
