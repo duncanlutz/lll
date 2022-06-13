@@ -1,6 +1,3 @@
 <div class="radio">
-    <div class="radio__text">
-        Brian will be live tomorrow, 
-    </div>
     <button class="radio__hide" onclick="closeRadio()"><ion-icon name="close"></ion-icon></button>
 </div>
