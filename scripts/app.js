@@ -1,3 +1,141 @@
+const radio = $(".radio");
+let music, source, loader, playButton, pauseButton, storageVolume, volume;
+const d = new Date();
+const t = new Date(d);
+t.setDate(t.getDate() + 1);
+const tomorrowsDate = t.toLocaleDateString(undefined, {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+let day = d.getDay();
+let radioContentLoaded = false;
+
+document.addEventListener("readystatechange", () => {
+  if (document.readyState === "complete" && radioContentLoaded === false) {
+    radioContentLoaded = true;
+    if (day === 1) {
+      radio.addClass("radio--visible");
+      radio.append(`<div class="radio__image" alt="El Show Del Potro Art"></div><div class="radio__right">
+      Brian will be live on El Show Del Potro tomorrow, <br>${tomorrowsDate}!<br><br>
+      Tune in to LA Grand 102.3 FM from 10am-11am to listen!
+      </div>`);
+    }
+
+    if (day === 2) {
+      function convertTZ(date, tzString) {
+        return new Date(
+          (typeof date === "string" ? new Date(date) : date).toLocaleString(
+            "en-US",
+            { timeZone: "America/Denver" }
+          )
+        );
+      }
+
+      const date = new Date();
+      const convertedDate = convertTZ(date, "America/Denver");
+      const curHours = convertedDate.getHours();
+
+      // if (curHours === 10) {
+      radio.append(`<div class="radio__image" alt="El Show Del Potro Art"></div>
+      <div class="radio__right">
+          <div class="radio--name">Brian is live on El Show Del Potro!<br>Listen now:</div>
+          <button onclick="runMusic()" class="radio__button">
+              <div class="radio__load radio--hidden">
+              <svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve"> <path fill="#000" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"> <animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="1s" from="0 50 50" to="360 50 50" repeatCount="indefinite" /></path></svg></div>
+              <ion-icon name="play" class="radio__play"></ion-icon>
+              <ion-icon name="pause" class="radio__pause radio--hidden"></ion-icon>
+          </button>
+          <div class="radio__volume">
+          <button>
+              <ion-icon name="volume-high-outline" class="volume-high-outline"></ion-icon>
+              <ion-icon name="volume-medium-outline" class="volume-medium-outline radio--hidden"></ion-icon>
+              <ion-icon name="volume-low-outline" class="volume-low-outline radio--hidden"></ion-icon>
+              <ion-icon name="volume-off-outline" class="volume-off-outline radio--hidden"></ion-icon>
+              <ion-icon name="volume-mute-outline" class="volume-mute-outline radio--hidden"></ion-icon>
+          </button>
+          <input type="range" id="volume-control">
+          </div>
+          <audio id="music" preload="all">
+              <source src="">
+          </audio>
+          </div>`);
+      music = document.getElementById("music");
+      source = document.querySelector("#music > source");
+      loader = $(".radio__load");
+      playButton = $(".radio__play");
+      pauseButton = $(".radio__pause");
+      storageVolume = 0.5;
+      volume = document.querySelector("#volume-control");
+      volume.addEventListener("input", (e) => {
+        music.volume = e.currentTarget.value / 100;
+        localStorage.setItem("radio_volume", e.currentTarget.value / 100);
+      });
+      radio.addClass("radio--visible");
+      if (localStorage.getItem("radio_volume")) {
+        storageVolume = localStorage.getItem("radio_volume");
+        volume.value = localStorage.getItem("radio_volume") * 100;
+      }
+      // }
+    }
+  }
+});
+
+function runMusic() {
+  if (radio.hasClass("radio--active")) {
+    radio.removeClass("radio--active");
+    pauseButton.addClass("radio--hidden");
+    playButton.removeClass("radio--hidden");
+    music.pause();
+    setTimeout(() => {
+      music.load();
+      source.src = "";
+      return;
+    });
+    return;
+  }
+
+  radio.addClass("radio--active");
+  source.src =
+    "https://live.wostreaming.net/direct/alphacorporate-kdutfmaac-ibc4?source=TuneIn&gdpr=0&us_privacy=1YNY";
+  music.load();
+  music.volume = 0;
+  music.play();
+  playButton.addClass("radio--hidden");
+  loader.removeClass("radio--hidden");
+
+  let loaded = false;
+  let lastFire = 0;
+  let curFire;
+
+  function timeUpdateListener() {
+    if (loaded === false) {
+      curFire = new Date().getTime() / 1000;
+
+      if (curFire - lastFire <= 0.75) {
+        loaded = true;
+        return;
+      }
+
+      lastFire = curFire;
+      return;
+    }
+    music.volume = storageVolume;
+    loader.addClass("radio--hidden");
+    pauseButton.removeClass("radio--hidden");
+    music.removeEventListener("timeupdate", timeUpdateListener, false);
+  }
+
+  music.addEventListener("timeupdate", timeUpdateListener, false);
+
+  return;
+}
+
+function closeRadio() {
+  if (radio.hasClass("radio--active")) runMusic();
+  radio.removeClass("radio--visible");
+}
+
 const queryParams = window.location.search.slice(1).split("&");
 let captcha = false;
 let captchaVisible = false;
@@ -399,6 +537,7 @@ const checkForm = (e) => {
             $(".message-success").removeClass("hidden");
           }, 100);
         }, 300);
+        dataLayer.push({ event: "Form Submission" });
         return;
       } else {
         messageFail();

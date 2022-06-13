@@ -1,0 +1,121 @@
+.radio {
+  position: fixed;
+  left: 35%;
+  bottom: -30%;
+  width: 25%;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  background-color: #fff;
+  z-index: 998;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1rem;
+  align-items: center;
+  -webkit-box-shadow: 5px 6px 15px -1px rgba(0, 0, 0, 0.16);
+  box-shadow: 5px 6px 15px -1px rgba(0, 0, 0, 0.16);
+  transition: bottom 1s cubic-bezier(0.63, 0.31, 0.44, 0.99);
+
+  &__button {
+    display: unset;
+  }
+
+  button {
+    background-color: rgba(0, 0, 0, 0);
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    font-size: 2rem;
+    min-width: 44px;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #000;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: ew-resize;
+    box-shadow: 0 0 2px 0 #555;
+    border: 2px solid black;
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+
+  &__image {
+    width: 30%;
+    background-image: url("../assets/el_show_del_potro.png");
+    background-position: center;
+    background-size: cover;
+    border-radius: 0.2rem;
+    aspect-ratio: 1/1;
+    -webkit-box-shadow: 5px 6px 15px -1px rgba(0, 0, 0, 0.16);
+    box-shadow: 5px 6px 15px -1px rgba(0, 0, 0, 0.16);
+  }
+
+  &__right {
+    width: 50%;
+  }
+
+  &__name {
+    font-weight: 100;
+  }
+
+  &__hide {
+    position: absolute;
+    right: 1%;
+    top: 4%;
+  }
+
+  &--hidden {
+    display: none;
+  }
+  @media (min-width: 2500px) {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 1450px) {
+    width: 30%;
+    left: 32.5%;
+  }
+  @media (max-width: 1000px) {
+    width: 40%;
+    left: 30%;
+  }
+  @media (max-width: 700px) {
+    width: 50%;
+    left: 22.5%;
+  }
+  @media (max-width: 500px) {
+    width: 70%;
+    left: 10%;
+
+    font-size: 0.8rem;
+  }
+}
+
+.radio--visible {
+  bottom: 4%;
+  transition-delay: 1.5s;
+}
+
+.radio__hover {
+  width: 2rem;
+  height: 2rem;
+}
