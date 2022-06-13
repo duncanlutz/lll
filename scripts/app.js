@@ -18,7 +18,7 @@ document.addEventListener("readystatechange", () => {
       radio.addClass("radio--visible");
       radio.append(`<div class="radio__image" alt="El Show Del Potro Art"></div><div class="radio__right">
       Brian will be live on El Show Del Potro tomorrow, <br>${tomorrowsDate}!<br><br>
-      Tune in to LA Grand 102.3 FM from 10am-11am to listen!
+      Tune in to <a href="https://www.lagrandsaltlake.com/shows/el-show-del-potro/">LA Grand 102.3 FM</a> from 10am-11am to listen!
       </div>`);
     }
 
