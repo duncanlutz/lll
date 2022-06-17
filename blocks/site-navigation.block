@@ -9,7 +9,7 @@
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <span data-spanish='Recibe una Consulta Gratuiita'>Request a Free Consultation</span>
                     </a>
-                    <button class="spanish-button tb-link" onclick="changeLanguage('spanish')">
+                    <button class="spanish-button tb-link" onclick="changeLanguage(false)">
                         Español
                     </button>
                 </div>
@@ -86,7 +86,7 @@
             const description = `{.section collection}{description}{.end}`;
             const newDescription = description.match(/(?<=\"\>)\w.*?(?=\<\/)/g);
             const navItem = document.querySelector('.{.section collection}{title}{.end} > a');
-            navItem.setAttribute('data-spanish', newDescription)
+            navItem.setAttribute('data-spanish', newDescription);
         </script>
 
       </div>
