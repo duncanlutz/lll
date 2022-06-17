@@ -15,25 +15,25 @@ function onloadCallback() {
         <div class="landing-wrapper">
             <div class="landing-text">
                 <h1 class="landing-text-l1" id="landing-header">
-                    <span class="l-text l-text-1" style="animation-delay: 200ms;">YOUR&nbsp</span><span class="l-text l-text-2" style="animation-delay: 400ms;">FIGHT</span>
+                    <span class="l-text l-text-1" style="animation-delay: 200ms;" data-spanish="SU&nbsp">YOUR&nbsp</span><span class="l-text l-text-2" style="animation-delay: 400ms;" data-spanish='LUCHA&nbsp'>FIGHT</span>
                 </h1>
                 <h1 class="landing-text-l2">
-                    <span class="l-text l-text-3" style="animation-delay: 600ms;">IS&nbsp</span>
-                    <span class="l-text l-text-4" style="animation-delay: 800ms;">OUR&nbsp</span><span class="l-text l-text-5" style="animation-delay: 1000ms;">FIGHT.</span>
+                    <span class="l-text l-text-3" style="animation-delay: 600ms;" data-spanish='NUESTRA&nbsp'>IS&nbsp</span>
+                    <span class="l-text l-text-4" style="animation-delay: 800ms;" data-spanish='LUCHA&nbsp'>OUR&nbsp</span><span class="l-text l-text-5" style="animation-delay: 1000ms;" data-spanish=''>FIGHT.</span>
                 </h1>
             </div>
             <div class="cb-wrapper">
-                <a href="#contact" class="consult-button">
+                <a href="#contact" class="consult-button" data-spanish='RECIBE UNA CONSULTA GRATUITA'>
                     REQUEST A FREE CONSULTATION
                 </a>
             </div>
         </div>
     </section>
     <section class="description-box" id="about-us">
-        <h1 class="description-title">
+        <h1 class="description-title" data-spanish='Profesionales, Estudiados y Comprometidos'>
             Professional, Educated, & Committed
         </h1>
-        <p class="description-paragraph">
+        <p class="description-paragraph" data-spanish='Lowrance Lundell Lofgren ha representado miles de clientes con éxito en las areas de Inmigración, Daños Personales y Defensa Criminal. Con decadas de experiencia, proveemos representación compasiva con amplio conocimiento, a nuestros clientes. Estamos listos para ayudar con sus necesidades legales.'>
             Lowrance Lundell Lofgren has successfully represented thousands of clients in Personal Injury, Immigration,
             and Criminal matters. With decades of experience, Lowrance Lundell Lofgren provides experienced,
             knowledgeable and compassionate representation of its clients. We look forward to meeting your legal
@@ -41,15 +41,15 @@ function onloadCallback() {
         </p>
     </section>
     <section class="practices-box" id="practices">
-        <h1 class="practices-title">
+        <h1 class="practices-title" data-spanish='Nuestras Prácticas'>
             Our Practices
         </h1>
         <div class="practices-content-item personal-injury-content content-item-left">
             <div class="practices-content-right">
-                <h3 class="practices-content-title personal-injury-title">
+                <h3 class="practices-content-title personal-injury-title" data-spanish='Daños Personales'>
                     Personal Injury
                 </h3>
-                <p class="practices-content-paragraph personal-injury-paragraph">
+                <p class="practices-content-paragraph personal-injury-paragraph" data-spanish='Hemos litigado cientos de casos de daños personales. Lowrance Lundell Lofgren tiene el conocimiento y la experienca para manejar su caso, profesionalmente y compasivamente, desde el principio hasta el final. Manejamos casos de lesiones a causa de accidentes automovilísticos, negligencia médica, muerte injusta, responsabilidad del producto, mordida de perros, lesiones en el trabajo, etc.'>
                     Having litigated thousands of personal injury cases, Lowrance Lundell Lofgren has the
                     knowledge
                     and
@@ -65,10 +65,10 @@ function onloadCallback() {
         </div>
         <div class="practices-content-item wrongful-death-content">
             <div class="practices-content-right">
-                <h3 class="practices-content-title wrongful-death-title">
+                <h3 class="practices-content-title wrongful-death-title" data-spanish='Muerte por Negligencia'>
                     Wrongful Death
                 </h3>
-                <p class="practices-content-paragraph wrongful-death-paragraph">
+                <p class="practices-content-paragraph wrongful-death-paragraph" data-spanish='Podemos asisterle durante este tiempo dificil y ayudarle obtener la compensacion que usted merece. Calculando la compensacion justa en un caso de muerte por negligencia es un proceso complejo que requiere revisar cuidadosamente varios factores Nosotros peleamos por usted para asegurar que la entidad culpable se haga responsable.'>
                     We can assist you during this difficult time to help you obtain the compensation you deserve. Calculating a fair settlement in a wrongful death case is a complex process that requires a careful review of numerous factors. We will fight for you to hold the responsible party accountable.
                 </p>
             </div>
@@ -77,10 +77,10 @@ function onloadCallback() {
         </div>
         <div class="practices-content-item immigration-content content-item-left">
             <div class="practices-content-right">
-                <h3 class="practices-content-title immigration-title">
+                <h3 class="practices-content-title immigration-title" data-spanish='Inmigración'>
                     Immigration
                 </h3>
-                <p class="practices-content-paragraph immigration-paragraph">
+                <p class="practices-content-paragraph immigration-paragraph" data-spanish='Le podemos ayudar aplicar para beneficios de inmigración y defender contra su deportación. Manejamos casos de ciudadanía, peticiones familiares, apelaciones, DACA, asilo, U visas, mociónes para reabrir y reconsiderar, consecuencias migratorias de actividad criminal, etc.'>
                     We can help you apply for immigration benefits and defend against your deportation. We
                     handle
                     U.S.
@@ -94,10 +94,10 @@ function onloadCallback() {
         </div>
         <div class="practices-content-item criminal-defense-content">
             <div class="practices-content-right">
-                <h3 class="practices-content-title criminal-defense-title">
+                <h3 class="practices-content-title criminal-defense-title" data-spanish='Defensa Criminal'>
                     Criminal Defense
                 </h3>
-                <p class="practices-content-paragraph criminal-defense-paragraph">
+                <p class="practices-content-paragraph criminal-defense-paragraph" data-spanish='Le representaremos con vigor y estaremos a su lado por todo el proceso. Usted no tiene que enfrentar el sistema solo. Le podemos ayudar con distintas tipos de casos tal como defensa de delitos de toda clase, conducir bajo la influencia, casos de drogas, delitos de tráfico, violencia doméstica, investigación y representación, problemas después de convición, y más.'>
                     We will zealously represent you and be at your side throughout the process. You don’t have
                     to
                     face
@@ -115,26 +115,27 @@ function onloadCallback() {
         <div class="pract-photos-bg photo-bg"></div>
     </section>
     <section class="our-team-box" id="team">
-        <h1 class="our-team-title">
+        <h1 class="our-team-title" data-spanish='Nuestro Equipo'>
             Meet Our Team
         </h1>
         <div class="profile-wrapper swiper">
         </div>
     </section>
     <section class="testimonials-box" id="testimonials">
-        <h1 class="testimonials-title">
+        <h1 class="testimonials-title" data-spanish='Testimoniales'>
             Testimonials
         </h1>
         <div class="testim-swiper swiper">
             <div class="testimonials-wrapper swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="testimonial-holder">
+                    <div class="testimonial-holder"><span data-spanish='John Lowrance, Rick Lundell, y su equipo entero trabajaron mi caso sin descanso. Ellos son amables, llenos de paciencia, y agradables. Son de lo mejor! Su personal de oficina son los mejores, se comunicaron conmigo durante el proceso entero. Yo le recomendaria este grupo a cualquiera.'>
                         John Lowrance, Rick Lundell, and their entire team worked tirelessly on my case. They were kind,
                         patient
                         and easy to talk to, no unapproachable stuffed shirts here! They are awesome! Their office staff
                         is
                         the
                         best ever, communicated with me through the whole process. I would highly recommend this group.
+                        <span>
                         <br>
                         <br>
                         - Shauna Merrill
@@ -142,10 +143,12 @@ function onloadCallback() {
                 </div>
                 <div class="swiper-slide">
                     <div class="testimonial-holder">
+                    <span data-spanish='Trabajar con ellos fue una gran experiencia, me hicieron sentir cómodo y bien cuidado por todo el proceso. Mejor que todo lo hicieron por un precio excelente, muchos abogados le cobrarán lo más posible ¡pero estos no! Siempre les usaré para mis necesidades legales. ¡Gracias!'>
                         It was a great experience working with them, they made me feel comfortable and taken care of
                         through the whole process. The best thing was they did it all for a great price, most lawyers
                         will take as much as they can get out of you, not these guys! I will always use them for my Law
                         Firm needs. Thank You!
+                        </span>
                         <br>
                         <br>
                         - Douglas Timms
@@ -153,10 +156,12 @@ function onloadCallback() {
                 </div>
                 <div class="swiper-slide">
                     <div class="testimonial-holder">
+                    <span data-spanish='Completamente satisfecha, se les recomiendo. Brian y todo su equipo son personas honestas y responsables. 10 años de buenas experiencias con toda mi familia, y más importante no le mienten para ganar dinero. Si usted necesita un grupo honesto no vaciles. Son excelentes, gracias Brian por toda su atención y por su dedicación y ayuda para mi familia.'>
                         Fully satisfied, I highly recommend. Brian and his entire team are honest responsible people. 10
                         years of good experiences with all my family, and most importantly they do not lie to you to
                         earn money. If you need an honest group do not hesitate. They are excellent, thanks Brian for
                         all your attention and for your dedication and help to my family.
+                        <span>
                         <br>
                         <br>
                         - Maria Islas
@@ -164,9 +169,11 @@ function onloadCallback() {
                 </div>
                 <div class="swiper-slide">
                     <div class="testimonial-holder">
+                    <span data-spanish='Un buen bufete. Muchos abogados buscan casos fáciles y realmente no se esfuerzan con su caso ni lo llevan a corte. Pero estos abogados trabajan muy duro para asegurar que termines con la liquidación más grande posible.'>
                         Great firm. Most personal injury lawyers are looking for quick settlements and won't actually
                         try very hard on your case or take it to court. Not these guys though. They work very hard to
                         make sure you are getting the biggest settlement possible.
+                        </span>
                         <br>
                         <br>
                         - Robert Murdock
@@ -179,40 +186,40 @@ function onloadCallback() {
         <div class="test-photos-bg photo-bg"></div>
     </section>
     <section class="contact-us" id="contact">
-        <h1 class="contact-title">
+        <h1 class="contact-title" data-spanish='Contáctenos'>
             Contact Us
         </h1>
         <form class="contact-form" method="POST">
         <div class="f-sec-one">
             <div class="f-line f-one">
                 <div class="input-name-div input-div">
-                    <label for="input-name">Name</label>
+                    <label for="input-name" data-spanish='Nombre'>Name</label>
                     <input type="text" name="Name" id="input-name">
                 </div>
                 <div class="input-email-div input-div">
-                    <label for="input-email">Email</label>
+                    <label for="input-email" data-spanish='Correo Electrónico'>Email</label>
                     <input type="text" name="email" id="input-email">
                 </div>
             </div>
             <div class="f-line f-two">
                 <div class="input-phone-div input-div">
-                    <label for="input-phone" class="i-phone input-label">Phone Number</label>
+                    <label for="input-phone" class="i-phone input-label" data-spanish='Número de Teléfono'>Phone Number</label>
                     <input type="text" name="Phone_Number" id="input-phone">
                 </div>
                 <div class="input-case-div input-div">
-                    <label for="input-case-type">Case Type</label>
+                    <label for="input-case-type" data-spanish='Tipo de caso'>Case Type</label>
                     <select name="Case_Type" id="input-case-type" onclick="openSelectMenu()">
-                        <option value="Personal Injury" id="personal-injury">Personal Injury</option>
-                        <option value="Wrongful Death" id="wrongful-death">Wrongful Death</option>
-                        <option value="Immigration" id="immigration">Immigration</option>
-                        <option value="Criminal Defense" id="criminal-defense">Criminal Defense</option>
+                        <option value="Personal Injury" id="personal-injury" data-spanish='Daños Personales'>Personal Injury</option>
+                        <option value="Wrongful Death" id="wrongful-death" data-spanish='Muerte por Negligencia'>Wrongful Death</option>
+                        <option value="Immigration" id="immigration" data-spanish='Inmigración'>Immigration</option>
+                        <option value="Criminal Defense" id="criminal-defense" data-spanish='Defensa Criminal'>Criminal Defense</option>
                     </select>
                 </div>
             </div>
             </div>
             <div class="f-line f-three">
                 <div class="input-message-div input-div">
-                    <label for="input-message">Message</label>
+                    <label for="input-message" data-spanish='Mensaje'>Message</label>
                     <textarea id="input-textarea"></textarea>
                     <input type="textarea" name="Message" id="input-message" />
                 </div>

@@ -79,7 +79,6 @@
       <main class="content-container" role="main" data-content-field="main-content">
        {squarespace.main-content}
       </main>
-
     </div>
     
     <footer>
@@ -97,7 +96,7 @@
         </div>
         <div class="footer-right">
             <div class="footer-text">
-                <span class="foot-line-1">
+                <span class="foot-line-1" data-spanish="Teléfono: (801) 446-6464">
                     Phone: (801) 446-6464
                 </span>
                 <span class="foot-line-2">
@@ -124,6 +123,7 @@
     <squarespace:script src="email.js" />
     <squarespace:script src="blogs.js" />
     <squarespace:script src="site.js" combo="{.if authenticatedAccount}false{.or}true{.end}" />
+    <squarespace:script src="language.js" />
     <squarespace:script src="app.js" />
 
     <!-- other scripts, and footer code injection -->

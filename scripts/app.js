@@ -525,9 +525,18 @@ const checkForm = (e) => {
           const contUs = $(".contact-us");
           contUs.css("height", height);
           $("form").remove();
-          contUs.append(
-            `<div class="message-success hidden"><span class="m-line-1">Your message has been recieved.</span><span class="m-line-2">We'll review the details you provided and get back to you as soon as possible.</span><span class="m-line-3">If your message is urgent, please call us at <a href="tel:8014466464">(801) 446-6464</a></span></div>`
-          );
+          if (
+            localStorage.getItem("language") == null ||
+            localStorage.getItem("language") === "english"
+          )
+            contUs.append(
+              `<div class="message-success hidden"><span class="m-line-1">Your message has been recieved.</span><span class="m-line-2">We'll review the details you provided and get back to you as soon as possible.</span><span class="m-line-3">If your message is urgent, please call us at <a href="tel:8014466464">(801) 446-6464</a></span></div>`
+            );
+          else {
+            contUs.append(
+              `<div class="message-success hidden"><span class="m-line-1">Su mensaje ha sido recibido.</span><span class="m-line-2">Revisaremos los datos que nos ha proporcionado y nos pondremos en contacto con usted lo antes posible.</span><span class="m-line-3">Si su mensaje es urgente, llámenos al <a href="tel:8014466464">(801) 446-6464</a></span></div>`
+            );
+          }
           contUs
             .css("display", "flex")
             .css("align-items", "flex-start")

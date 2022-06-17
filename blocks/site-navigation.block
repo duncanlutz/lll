@@ -1,17 +1,17 @@
 <nav class="desk-nav">
         <div class="top-bar">
             <div class="tb-wrapper">
-                <div class="tb-left">
-                    Call Us: <a href="tel:8014466464" class="tb-link {.section active} active-link{.end}">(801) 446-6464</a>
+                <div class="tb-left" ><span data-spanish='Llámenos:'>
+                    Call Us: </span><a href="tel:8014466464" class="tb-link {.section active} active-link{.end}">(801) 446-6464</a>
                 </div>
                 <div class="tb-right">
                     <a href="/#contact" class="tb-link request-consultation">
                         <ion-icon name="chatbubble-outline"></ion-icon>
-                        Request a Free Consultation
+                        <span data-spanish='Recibe una Consulta Gratuiita'>Request a Free Consultation</span>
                     </a>
-                    {#  <button class="spanish-button tb-link">
+                    <button class="spanish-button tb-link" onclick="changeLanguage('spanish')">
                         Español
-                    </button>  }
+                    </button>
                 </div>
             </div>
         </div>
@@ -59,19 +59,17 @@
             </div>
   <div class="nav-right">
     <div class="nav-button practices">
-      <a class="nav-button practices" href="/#practices">Practices</a>
+      <a class="nav-button practices" href="/#practices" data-spanish='Prácticas'>Practices</a>
     </div>
     <div class="nav-button testimonials">
-      <a class="nav-button testimonials" href="/#testimonials">Testimonials</a>
+      <a class="nav-button testimonials" href="/#testimonials" data-spanish='Testimonios'>Testimonials</a>
     </div>
     <div class="nav-button contact">
-      <a class="nav-button contact ca" href="/#contact">Contact</a>
+      <a class="nav-button contact ca" href="/#contact" data-spanish='Contáctenos'>Contact</a>
     </div>
 
     {.repeated section items}
-
-      <div class="nav-button {.section active} active-link{.end}">
-
+      <div class="nav-button {.section collection}{title}{.end}{.section active} active-link{.end}">
         <!-- collection link -->
         {.section collection}
           <a href="{fullUrl}">{navigationTitle}</a>
@@ -83,6 +81,13 @@
             {title}
           </a>
         {.end}
+
+        <script>
+            const description = `{.section collection}{description}{.end}`;
+            const newDescription = description.match(/(?<=\"\>)\w.*?(?=\<\/)/g);
+            const navItem = document.querySelector('.{.section collection}{title}{.end} > a');
+            navItem.setAttribute('data-spanish', newDescription)
+        </script>
 
       </div>
 
