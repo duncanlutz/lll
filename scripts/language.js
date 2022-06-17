@@ -19,4 +19,4 @@ const changeLanguage = (lang) => {
   }
 };
 
-changeLanguage("spanish");
+// changeLanguage("spanish");
