@@ -15,6 +15,12 @@
         <div class="attorney-name">{title}</div>
         <!-- Attorney Description / Post body -->
         <div class="attorney-description">{body}</div>
+        <script>
+            const description = `{.section collection}{description}{.end}`;
+            const newDescription = description.match(/(?<=\"\>)\w.*?(?=\<\/)/g);
+            const navItem = document.querySelector('.{.section collection}{title}{.end} > a');
+            navItem.setAttribute('data-spanish', newDescription)
+        </script>
     </div>
     <div class="background-color"></div>
   </div>
