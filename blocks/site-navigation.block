@@ -9,9 +9,9 @@
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <span data-spanish='Recibe una Consulta Gratuiita'>Request a Free Consultation</span>
                     </a>
-                    <button class="spanish-button tb-link" onclick="changeLanguage(false)">
+                    {#  <button class="spanish-button tb-link" onclick="changeLanguage(false)">
                         Español
-                    </button>
+                    </button>  }
                 </div>
             </div>
         </div>
