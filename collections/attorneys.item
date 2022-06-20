@@ -22,7 +22,7 @@
             const pSelector = document.querySelectorAll('p');
             pSelector.forEach((p, ind) => {
               if (spanishTextArray[ind] == null || spanishTextArray[ind] == '') {
-                p.setAttribute('data-spanish', p.innerText);
+                p.setAttribute('data-spanish', '');
                 return;
               }
               p.setAttribute('data-spanish', spanishTextArray[ind]);

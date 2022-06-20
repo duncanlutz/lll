@@ -123,7 +123,7 @@
     <squarespace:script src="email.js" />
     <squarespace:script src="blogs.js" />
     <squarespace:script src="site.js" combo="{.if authenticatedAccount}false{.or}true{.end}" />
-    {#  <squarespace:script src="language.js" />  }
+    <squarespace:script src="language.js" />
     <squarespace:script src="app.js" />
 
     <!-- other scripts, and footer code injection -->
