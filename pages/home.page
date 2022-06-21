@@ -18,8 +18,8 @@ function onloadCallback() {
                     <span class="l-text l-text-1" style="animation-delay: 200ms;" data-spanish="SU&nbsp">YOUR&nbsp</span><span class="l-text l-text-2" style="animation-delay: 400ms;" data-spanish='LUCHA&nbsp'>FIGHT</span>
                 </h1>
                 <h1 class="landing-text-l2">
-                    <span class="l-text l-text-3" style="animation-delay: 600ms;" data-spanish='ES&nbsp'>IS&nbsp</span>
-                    <span class="l-text l-text-4" style="animation-delay: 800ms;" data-spanish='NUESTRA&nbsp'>OUR&nbsp</span><span class="l-text l-text-5" style="animation-delay: 1000ms;" data-spanish='LUCHA&nbsp'>FIGHT.</span>
+                    <span class="l-text l-text-3" style="animation-delay: 600ms;" data-spanish='NUESTRA&nbsp'>IS&nbsp</span>
+                    <span class="l-text l-text-4" style="animation-delay: 800ms;" data-spanish='LUCHA&nbsp'>OUR&nbsp</span><span class="l-text l-text-5" style="animation-delay: 1000ms;" data-spanish=''>FIGHT.</span>
                 </h1>
             </div>
             <div class="cb-wrapper">
@@ -226,7 +226,7 @@ function onloadCallback() {
             </div>
             <input type="text" name="_honey" style="display:none" />
             <div class="g-recaptcha" id="recaptcha"></div>
-            <button type="submit" class="sub-button" onclick="checkForm(event);">Send</button>
+            <button type="submit" class="sub-button" onclick="checkForm(event);" data-spanish="Mandar">Send</button>
             <div class="error-box"></div>
         </form>
     </section>

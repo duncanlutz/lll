@@ -7,7 +7,7 @@
                 <div class="tb-right">
                     <a href="/#contact" class="tb-link request-consultation">
                         <ion-icon name="chatbubble-outline"></ion-icon>
-                        <span data-spanish='Recibe una Consulta Gratuiita'>Request a Free Consultation</span>
+                        <span data-spanish='Reciba una Consulta Gratuita'>Request a Free Consultation</span>
                     </a>
                     <button class="spanish-button tb-link" onclick="changeLanguage(false)">
                         Español
