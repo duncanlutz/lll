@@ -36,8 +36,8 @@ document.addEventListener("readystatechange", () => {
       const convertedDate = convertTZ(date, "America/Denver");
       const curHours = convertedDate.getHours();
 
-      // if (curHours === 10) {
-      radio.append(`<div class="radio__image" alt="El Show Del Potro Art"></div>
+      if (curHours === 10) {
+        radio.append(`<div class="radio__image" alt="El Show Del Potro Art"></div>
       <div class="radio__right">
           <div class="radio--name">Brian is live on El Show Del Potro!<br>Listen now:</div>
           <button onclick="runMusic()" class="radio__button">
@@ -60,23 +60,23 @@ document.addEventListener("readystatechange", () => {
               <source src="">
           </audio>
           </div>`);
-      music = document.getElementById("music");
-      source = document.querySelector("#music > source");
-      loader = $(".radio__load");
-      playButton = $(".radio__play");
-      pauseButton = $(".radio__pause");
-      storageVolume = 0.5;
-      volume = document.querySelector("#volume-control");
-      volume.addEventListener("input", (e) => {
-        music.volume = e.currentTarget.value / 100;
-        localStorage.setItem("radio_volume", e.currentTarget.value / 100);
-      });
-      radio.addClass("radio--visible");
-      if (localStorage.getItem("radio_volume")) {
-        storageVolume = localStorage.getItem("radio_volume");
-        volume.value = localStorage.getItem("radio_volume") * 100;
+        music = document.getElementById("music");
+        source = document.querySelector("#music > source");
+        loader = $(".radio__load");
+        playButton = $(".radio__play");
+        pauseButton = $(".radio__pause");
+        storageVolume = 0.5;
+        volume = document.querySelector("#volume-control");
+        volume.addEventListener("input", (e) => {
+          music.volume = e.currentTarget.value / 100;
+          localStorage.setItem("radio_volume", e.currentTarget.value / 100);
+        });
+        radio.addClass("radio--visible");
+        if (localStorage.getItem("radio_volume")) {
+          storageVolume = localStorage.getItem("radio_volume");
+          volume.value = localStorage.getItem("radio_volume") * 100;
+        }
       }
-      // }
     }
   }
 });

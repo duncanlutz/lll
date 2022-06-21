@@ -35,7 +35,7 @@ function onloadCallback() {
         </h1>
         <p class="description-paragraph" data-spanish='Lowrance Lundell Lofgren ha representado miles de clientes con éxito en las areas de Daños Personales, Inmigración, y Defensa Criminal. Con decadas de experiencia, proveemos representación compasiva con amplio conocimiento, a nuestros clientes. Estamos listos para ayudar con sus necesidades legales.'>
             Lowrance Lundell Lofgren has successfully represented thousands of clients in Personal Injury, Immigration,
-            and Criminal matters. With decades of experience, Lowrance Lundell Lofgren provides experienced,
+            and Criminal matters. With decades of experience. Lowrance Lundell Lofgren provides experienced,
             knowledgeable and compassionate representation of its clients. We look forward to meeting your legal
             services needs.
         </p>
@@ -84,7 +84,7 @@ function onloadCallback() {
                     We can help you apply for immigration benefits and defend against your deportation. We
                     handle
                     U.S.
-                    citizenship, family petitions, appeals, Deferred Action (DACA), asylum, U visas, motions to
+                    Citizenship, family petitions, appeals, Deferred Action (DACA), asylum, U visas, motions to
                     reopen
                     and reconsider, immigration consequences of criminal activity, and more.
                 </p>
