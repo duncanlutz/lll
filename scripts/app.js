@@ -1,3 +1,16 @@
+function gtag_report_conversion() {
+  var callback = function () {
+    // if (typeof url != "undefined") {
+    //   window.location = url;
+    // }
+  };
+  gtag("event", "conversion", {
+    send_to: "AW-416147572/_X2DCKigpMkDEPTQt8YB",
+    event_callback: callback,
+  });
+  return false;
+}
+
 const radio = $(".radio");
 let music, source, loader, playButton, pauseButton, storageVolume, volume;
 const d = new Date();
@@ -546,7 +559,7 @@ const checkForm = (e) => {
             $(".message-success").removeClass("hidden");
           }, 100);
         }, 300);
-        dataLayer.push({ event: "Form Submission" });
+        gtag_report_conversion();
         return;
       } else {
         messageFail();
