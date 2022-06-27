@@ -17,7 +17,8 @@
     gtag('js', new Date());
 
     gtag('config', 'G-HELG375DTH');
-        gtag('config', 'UA-190051119-2');
+    gtag('config', 'UA-190051119-2');
+    gtag('config', 'AW-416147572');
     </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
     <meta charset="UTF-8">
