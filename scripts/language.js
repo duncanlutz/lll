@@ -1,3 +1,17 @@
+const s = window.location.search.split("?");
+if (s[1] != null) {
+  if (/lang\=\w./.test(s[1])) {
+    const searchLanguage = s[1].match(/(?<=lang\=)../g);
+
+    if (searchLanguage == "es") {
+      localStorage.setItem("language", "spanish");
+    }
+    if (searchLanguage == "en") {
+      localStorage.setItem("language", "english");
+    }
+  }
+}
+
 var all = document.getElementsByTagName("*");
 
 if (localStorage.getItem("language") == null) {
